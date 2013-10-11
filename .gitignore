@@ -18,6 +18,12 @@ develop-eggs
 lib
 lib64
 
+# Documentation build files
+doc/**/*.rst
+doc/conf.py
+doc/make.bat
+doc/Makefile
+
 # Installer logs
 pip-log.txt
 
@@ -31,5 +37,10 @@ nosetests.xml
 
 # Mr Developer
 .mr.developer.cfg
+
+# Eclipse project files
 .project
 .pydevproject
+
+# rope project files
+.ropeproject
