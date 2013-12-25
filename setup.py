@@ -13,7 +13,7 @@ from setuptools import find_packages as _find_packages, setup as _setup
 
 NAME = 'Bedframe'
 
-VERSION = '0.13.0'
+VERSION = '0.13.1'
 
 SITE_URI = ''
 
