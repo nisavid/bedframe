@@ -293,16 +293,16 @@ doc-build:
 	cp '$(DOC_MAKEFILE_TEMPLATE)' '$(DOC_MAKEFILE)'
 	
 	project=$$(echo '$(NAME)' | sed 's_/_\\/_g') \
-     && sed -i "s/^\(project =\).*$$/\1 u\'$$project\'/" '$(DOC_CONFIG)' \
-     && sed -i "s/^\(set PROJECT=\).*$$/\1$$project/" '$(DOC_MAKE_BAT)' \
-     && sed -i "s/^\(PROJECT =\).*$$/\1 $$project/" '$(DOC_MAKEFILE)'
+     && sed -i'' -e "s/^\(project =\).*$$/\1 u'$$project'/" '$(DOC_CONFIG)' \
+     && sed -i'' -e "s/^\(set PROJECT=\).*$$/\1$$project/" '$(DOC_MAKE_BAT)' \
+     && sed -i'' -e "s/^\(PROJECT =\).*$$/\1 $$project/" '$(DOC_MAKEFILE)'
 	description=$$(echo '$(DESCRIPTION)' | sed 's_/_\\/_g') \
-     && sed -i "s/^\(description =\).*$$/\1 u\'$$description\'/" \
-                  '$(DOC_CONFIG)'
+     && sed -i'' -e "s/^\(description =\).*$$/\1 u'$$description'/" \
+            '$(DOC_CONFIG)'
 	version=$$(echo '$(VERSION_NOSUFFIX)' | sed 's_/_\\/_g') \
-     && sed -i "s/^\(version =\).*$$/\1 \'$$version\'/" '$(DOC_CONFIG)'
+     && sed -i'' -e "s/^\(version =\).*$$/\1 '$$version'/" '$(DOC_CONFIG)'
 	release=$$(echo '$(VERSION)' | sed 's_/_\\/_g') \
-     && sed -i "s/^\(release =\).*$$/\1 \'$$release\'/" '$(DOC_CONFIG)'
+     && sed -i'' -e "s/^\(release =\).*$$/\1 '$$release'/" '$(DOC_CONFIG)'
 	
 	$(DOC_GEN_REST) && $(PYTHON_SETUP) $(SETUP_CMD_BUILD_DOC)
 
