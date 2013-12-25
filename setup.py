@@ -17,12 +17,21 @@ VERSION = '0.13.1'
 
 SITE_URI = ''
 
-DESCRIPTION = 'A resource-oriented web services framework.'
+DESCRIPTION = 'A resource-oriented web services framework'
 
-LONG_DESCRIPTION = DESCRIPTION + '''
-'''
+README_FILE = 'README.rst'
+with open(README_FILE, 'r') as _file:
+    README = _file.read()
 
-LICENSE = 'LGPLv3'
+CHANGES_FILE = 'CHANGES.rst'
+with open(CHANGES_FILE, 'r') as _file:
+    CHANGES = _file.read()
+
+LICENSE_FILE = 'LICENSE'
+with open(LICENSE_FILE, 'r') as _file:
+    LICENSE = _file.read()
+
+LONG_DESCRIPTION = '\n\n'.join((README, CHANGES))
 
 TROVE_CLASSIFIERS = \
     ('Development Status :: 5 - Production/Stable',
