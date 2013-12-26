@@ -7,7 +7,7 @@ import abc as _abc
 from collections import Mapping as _Mapping, MutableMapping as _MutableMapping
 from itertools import chain as _chain, combinations as _combinations
 
-from nisavid.collections \
+from spruce.collections \
     import frozendict as _frozendict, frozenset as _frozenset
 
 

@@ -8,7 +8,7 @@ from base64 import b64encode as _b64encode
 from itertools import chain as _chain, combinations as _combinations
 import re as _re
 
-from nisavid.collections import frozenusetset as _frozenusetset
+from spruce.collections import frozenusetset as _frozenusetset
 
 from ... import digest as _digest
 from .. import _std as _std_http

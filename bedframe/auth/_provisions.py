@@ -8,9 +8,9 @@ from functools import reduce as _reduce
 from itertools import chain as _chain, combinations as _combinations
 from operator import or_ as _or
 
-from nisavid.collections \
+from spruce.collections \
     import frozenusetset as _frozenusetset, usetset as _usetset
-from nisavid.lang import namedflagset_classes as _namedflagset_classes
+from spruce.lang import namedflagset_classes as _namedflagset_classes
 
 
 def provisionsets_combinations(provisionsets, choose0=True):
@@ -62,8 +62,8 @@ _ProvisionSet_doc_body = \
             print 'vulnerability to a mangled request entity'
 
     .. seealso::
-        :class:`nisavid.lang.NamedFlagSet \
-                <nisavid.lang._datatypes._misc.NamedFlagSet>`
+        :class:`spruce.lang.NamedFlagSet \
+                <spruce.lang._datatypes._misc.NamedFlagSet>`
 
     """
 _ProvisionSet_doc = \
@@ -224,8 +224,8 @@ class ProvisionSetSet(ProvisionSetSetABC, _usetset):
     """A set of provision sets.
 
     .. seealso::
-        :class:`nisavid.collections.usetset \
-                <nisavid.collections._sets._universalizable.usetset>`
+        :class:`spruce.collections.usetset \
+                <spruce.collections._sets._universalizable.usetset>`
 
     """
     @classmethod
@@ -237,8 +237,8 @@ class FrozenProvisionSetSet(ProvisionSetSetABC, _frozenusetset):
     """An immutable set of provision sets.
 
     .. seealso::
-        :class:`nisavid.collections.frozenusetset \
-                <nisavid.collections._sets._universalizable.frozenusetset>`
+        :class:`spruce.collections.frozenusetset \
+                <spruce.collections._sets._universalizable.frozenusetset>`
 
     """
     @classmethod

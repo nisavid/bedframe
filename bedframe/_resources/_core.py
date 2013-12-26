@@ -6,8 +6,8 @@ __docformat__ = "restructuredtext"
 import cgi as _cgi
 from textwrap import dedent as _dedent
 
-from nisavid.collections import odict as _odict
-from nisavid.pprint import indented as _indented
+from spruce.collections import odict as _odict
+from spruce.pprint import indented as _indented
 
 from .. import _debug
 from .. import _exc

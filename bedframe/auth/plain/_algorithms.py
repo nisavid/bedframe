@@ -3,7 +3,7 @@
 __copyright__ = "Copyright (C) 2013 Ivan D Vasin and Cogo Labs"
 __docformat__ = "restructuredtext"
 
-from nisavid.collections import frozenset as _frozenset
+from spruce.collections import frozenset as _frozenset
 
 from .. import _algorithms
 from .. import _info

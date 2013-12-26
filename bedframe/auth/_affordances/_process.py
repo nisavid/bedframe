@@ -5,7 +5,7 @@ __docformat__ = "restructuredtext"
 
 import abc as _abc
 
-from nisavid.collections \
+from spruce.collections \
     import frozenusetset as _frozenusetset, usetset as _usetset
 
 from . import _core as _affordances_core

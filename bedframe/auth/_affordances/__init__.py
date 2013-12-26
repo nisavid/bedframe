@@ -12,8 +12,8 @@ defined over the following types of parameters:
 For all of these parameter types, an
 :class:`~bedframe.auth._affordances._core.AffordanceSet` may contain
 multiple afforded values.  In fact, since it uses a
-:class:`nisavid.collections.uset
-<nisavid.collections._sets._universalizable.uset>` to define the values
+:class:`spruce.collections.uset
+<spruce.collections._sets._universalizable.uset>` to define the values
 for each such type, it is possible for an :class:`!AffordanceSet` to
 afford all possible values for a parameter without listing them
 explicitly.

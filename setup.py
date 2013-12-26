@@ -50,23 +50,23 @@ TROVE_CLASSIFIERS = \
 
 SETUP_DEPS = ()
 
-INSTALL_DEPS = ('nisavid-collections',
-                'nisavid-datetime',
-                'nisavid-lang',
-                'nisavid-logging',
-                'nisavid-pprint',
-                'nisavid-http-common',
-                'nisavid-validation',
-                'psutil',
+INSTALL_DEPS = ('psutil',
                 'raven',
                 'pytz',
                 'requests >1',
+                'spruce-collections',
+                'spruce-datetime',
+                'spruce-lang',
+                'spruce-logging',
+                'spruce-pprint',
+                'spruce-http-common',
+                'spruce-validation',
                 'ujson-bedframe',
                 )
 
 EXTRAS_DEPS = {'ldap': ('python-ldap',),
                'memcache': ('python-memcached',),
-               'test_ldap': ('nisavid-ldap [openldap]',),
+               'test_ldap': ('spruce-ldap [openldap]',),
                'tornado': ('tornado-bedframe >3',),
                'tornado_wsgi': ('gevent', 'tornado-bedframe >3'),
                }

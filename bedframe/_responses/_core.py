@@ -3,8 +3,8 @@
 __copyright__ = "Copyright (C) 2013 Ivan D Vasin and Cogo Labs"
 __docformat__ = "restructuredtext"
 
-from nisavid.collections import typedodict as _typedodict
-from nisavid.lang import enum as _enum
+from spruce.collections import typedodict as _typedodict
+from spruce.lang import enum as _enum
 
 
 WebResponseFacetType = _enum('web response facet type',

@@ -5,7 +5,7 @@ __docformat__ = "restructuredtext"
 
 import abc as _abc
 
-from nisavid.collections import odict as _odict
+from spruce.collections import odict as _odict
 
 from . import _handlers
 

@@ -21,7 +21,7 @@ class datetime(_core.webobject):
 
     @classmethod
     def fromprim(cls, prim):
-        # FIXME: generalize this and move it to :mod:`nisavid.datetime`
+        # FIXME: generalize this and move it to :mod:`spruce.datetime`
         match = cls._FORMAT_RE.match(prim)
         if match:
             try:

@@ -13,8 +13,8 @@ from urlparse \
            urlsplit as _urlsplit, \
            urlunsplit as _urlunsplit
 
-import nisavid.http as _http
-import nisavid.http.status as _http_status
+import spruce.http as _http
+import spruce.http.status as _http_status
 import ujson as _json
 
 from .. import _debug

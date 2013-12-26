@@ -6,7 +6,7 @@ __docformat__ = "restructuredtext"
 import abc as _abc
 from itertools import product as _product
 
-from nisavid.collections \
+from spruce.collections \
     import frozenuset as _frozenuset, frozenusetset as _frozenusetset
 
 from .. import _exc

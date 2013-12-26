@@ -291,7 +291,7 @@ Glossary
         action described by the corresponding :term:`request`.
 
         In HTTP, the status code is an integer.  All HTTP status codes
-        are named and listed in :mod:`nisavid.http.status`.
+        are named and listed in :mod:`spruce.http.status`.
 
     web API
         An API that is accessed via HTTP or a similar protocol.

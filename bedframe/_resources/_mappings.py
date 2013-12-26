@@ -5,7 +5,7 @@ __docformat__ = "restructuredtext"
 
 import re as _re
 
-from nisavid.lang import subclass_of as _subclass_of
+from spruce.lang import subclass_of as _subclass_of
 
 from .. import _collections as _coll
 from .. import _methods as _meth

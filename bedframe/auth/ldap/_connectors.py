@@ -15,7 +15,7 @@ try:
     import memcache as _memcache
 except ImportError:
     _memcache = None
-from nisavid.collections import frozenset as _frozenset
+from spruce.collections import frozenset as _frozenset
 
 from .. import _connectors
 from .. import _info

@@ -3,7 +3,7 @@
 __copyright__ = "Copyright (C) 2013 Ivan D Vasin and Cogo Labs"
 __docformat__ = "restructuredtext"
 
-from nisavid.lang import namedflagset_classes as _namedflagset_classes
+from spruce.lang import namedflagset_classes as _namedflagset_classes
 
 
 _DebugFlagSet_doc_body = \

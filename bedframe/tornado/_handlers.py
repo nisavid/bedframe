@@ -9,11 +9,11 @@ import sys as _sys
 from urllib import unquote_plus as _percent_plus_decode
 from urlparse import urlsplit as _urisplit
 
-from nisavid.collections import odict as _odict, oset as _oset
-from nisavid.datetime import now_localtime as _now_localtime
-import nisavid.logging as _logging
-from nisavid.pprint import indented as _indented
-from nisavid.lang import bool as _bool
+from spruce.collections import odict as _odict, oset as _oset
+from spruce.datetime import now_localtime as _now_localtime
+from spruce.lang import bool as _bool
+import spruce.logging as _logging
+from spruce.pprint import indented as _indented
 import tornado.web as _tnd_web
 
 from .. import http as _http
