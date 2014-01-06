@@ -6,7 +6,7 @@ These objects provide support for :rfc:`HTTP <2616>`.
 
 """
 
-__copyright__ = "Copyright (C) 2013 Ivan D Vasin and Cogo Labs"
+__copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
 
 from ._exc import *
