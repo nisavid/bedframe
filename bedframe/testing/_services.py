@@ -1,6 +1,6 @@
 """:mod:`Web service <bedframe._services>` testing."""
 
-__copyright__ = "Copyright (C) 2013 Ivan D Vasin and Cogo Labs"
+__copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
 
 import abc as _abc
@@ -20,14 +20,14 @@ from urlparse \
            urlunsplit as _uriunsplit
 from xml.etree import ElementTree as _ElementTree
 
-from nisavid.collections import frozenuset as _frozenuset, odict as _odict
-from nisavid.pprint import indented as _indented
-import nisavid.http.status as _http_status
-from nisavid.lang import regex_class as _regex_class
-import nisavid.ldap.testing as _ldaptest
 import napper as _napper
-import nisavid.validation as _validation
 import requests as _requests
+from spruce.collections import frozenuset as _frozenuset, odict as _odict
+import spruce.http.status as _http_status
+from spruce.lang import regex_class as _regex_class
+import spruce.ldap.testing as _ldaptest
+from spruce.pprint import indented as _indented
+import spruce.validation as _validation
 
 import bedframe.auth.ldap as _bedframe_ldap_auth
 from ._auth import _connectors as _bedtest_auth_connectors
@@ -209,7 +209,7 @@ class WebServiceTestCase(_unittest.TestCase):
         :param status:
             The expected response :term:`status code`.
 
-            .. seealso:: :mod:`nisavid.http.status`
+            .. seealso:: :mod:`spruce.http.status`
         :type status: :obj:`int` or null
 
         :param class_def_module:
@@ -578,7 +578,7 @@ class WebServiceTestCase(_unittest.TestCase):
         :param statuscode:
             The expected response :term:`status code`.
 
-            .. seealso:: :mod:`nisavid.http.status`
+            .. seealso:: :mod:`spruce.http.status`
         :type status: :obj:`int` or null
 
         :raise AssertionError:
@@ -624,7 +624,7 @@ class WebServiceTestCase(_unittest.TestCase):
         :param status:
             The expected response :term:`status code`.
 
-            .. seealso:: :mod:`nisavid.http.status`
+            .. seealso:: :mod:`spruce.http.status`
         :type status: :obj:`int` or null
 
         :param contenttype:

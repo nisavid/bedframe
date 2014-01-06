@@ -6,13 +6,13 @@ algorithms.
 
 """
 
-__copyright__ = "Copyright (C) 2013 Ivan D Vasin and Cogo Labs"
+__copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
 
 import re as _re
 
-from nisavid.collections import odict as _odict, uset as _uset
-from nisavid.lang import instance_of as _instance_of
+from spruce.collections import odict as _odict, uset as _uset
+from spruce.lang import instance_of as _instance_of
 
 from .. import _collections as _coll
 from . import _affordances

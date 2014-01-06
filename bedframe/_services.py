@@ -1,6 +1,6 @@
 """Web services."""
 
-__copyright__ = "Copyright (C) 2013 Ivan D Vasin and Cogo Labs"
+__copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
 
 import abc as _abc
@@ -8,11 +8,11 @@ import os as _os
 import signal as _signal
 from urlparse import urlsplit as _urlsplit
 
-import nisavid.logging as _logging
-import nisavid.settings as _settings
-from nisavid.lang import bool as _bool, enum as _enum, int as _int
 import psutil as _ps
 import raven as _sentry
+from spruce.lang import bool as _bool, enum as _enum, int as _int
+import spruce.logging as _logging
+import spruce.settings as _settings
 import ujson as _json
 
 from . import auth as _auth
@@ -163,8 +163,8 @@ class WebServiceImpl(object):
 
     .. note:: **TODO:**
         encapsulate the components that are common to this and
-        :class:`nisavid.ldap.ServiceImpl \
-                <nisavid.ldap._services.ServiceImpl>`
+        :class:`spruce.ldap.ServiceImpl \
+                <spruce.ldap._services.ServiceImpl>`
 
     """
 

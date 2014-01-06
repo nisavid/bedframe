@@ -1,13 +1,13 @@
 """Connectors."""
 
-__copyright__ = "Copyright (C) 2013 Ivan D Vasin and Cogo Labs"
+__copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
 
 import json as _json
 from uuid import uuid4 as _uuid4
 
-from nisavid.collections import frozenset as _frozenset
 import memcache as _memcache
+from spruce.collections import frozenset as _frozenset
 
 from .. import session as _session
 from .. import _info

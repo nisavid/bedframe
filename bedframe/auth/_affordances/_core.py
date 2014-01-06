@@ -1,12 +1,12 @@
 """Affordances core."""
 
-__copyright__ = "Copyright (C) 2013 Ivan D Vasin and Cogo Labs"
+__copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
 
 import abc as _abc
 import re as _re
 
-from nisavid.collections \
+from spruce.collections \
     import frozenuset as _frozenuset, odict as _odict, uset as _uset
 
 from .. import _exc

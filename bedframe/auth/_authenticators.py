@@ -1,6 +1,6 @@
 """Authenticators."""
 
-__copyright__ = "Copyright (C) 2013 Ivan D Vasin and Cogo Labs"
+__copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
 
 from functools import partial as _partial
@@ -8,10 +8,10 @@ from itertools import chain as _chain
 import re as _re
 import sys as _sys
 
-import nisavid.collections as _coll
-from nisavid.collections \
+import spruce.collections as _coll
+from spruce.collections \
     import frozenset as _frozenset, frozenuset as _frozenuset, set as _set
-import nisavid.logging as _logging
+import spruce.logging as _logging
 
 from .. import _exc as _bedframe_exc
 from . import _affordances

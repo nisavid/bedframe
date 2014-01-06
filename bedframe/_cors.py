@@ -5,11 +5,11 @@
 
 """
 
-__copyright__ = "Copyright (C) 2013 Ivan D Vasin and Cogo Labs"
+__copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
 
-from nisavid.collections import odict as _odict, uset as _uset
-from nisavid.lang import enum as _enum
+from spruce.collections import odict as _odict, uset as _uset
+from spruce.lang import enum as _enum
 
 from . import _collections as _coll
 

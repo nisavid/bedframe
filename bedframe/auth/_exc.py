@@ -1,6 +1,6 @@
 """Exceptions."""
 
-__copyright__ = "Copyright (C) 2013 Ivan D Vasin and Cogo Labs"
+__copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
 
 import abc as _abc
@@ -337,8 +337,8 @@ class UnsuitableAgent(Error):
     :param supported_realms:
         The agent's supported authentication realms.
     :type supported_realms:
-        :class:`nisavid.collections.uset \
-                <nisavid.collections._sets._universalizable.uset>`
+        :class:`spruce.collections.uset \
+                <spruce.collections._sets._universalizable.uset>`
 
     :param supported_provisionsets:
         The agent's sets of supported security provisions.

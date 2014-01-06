@@ -9,19 +9,19 @@ them to a server, and processing the subsequent responses.
 
 """
 
-__copyright__ = "Copyright (C) 2013 Ivan D Vasin and Cogo Labs"
+__copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
 
 import re as _re
 from urllib import urlencode as _urlencode
 from urlparse import urljoin as _urljoin
 
-from nisavid.collections import odict as _odict
 import bedframe.webtypes as _webtypes
-import nisavid.http as _http
-from nisavid.lang import bool as _bool
 import requests as _requests
 import requests.auth as _requests_auth
+from spruce.collections import odict as _odict
+import spruce.http as _http
+from spruce.lang import bool as _bool
 
 
 def extract_retval(response, type):

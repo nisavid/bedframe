@@ -1,9 +1,9 @@
 """Tornado core."""
 
-__copyright__ = "Copyright (C) 2013 Ivan D Vasin and Cogo Labs"
+__copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
 
-import nisavid.logging as _logging
+import spruce.logging as _logging
 
 
 TORNADO_LOGGER = _logging.getLogger('tornado')

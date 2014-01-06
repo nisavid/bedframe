@@ -1,6 +1,6 @@
 """Algorithms."""
 
-__copyright__ = "Copyright (C) 2013 Ivan D Vasin and Cogo Labs"
+__copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
 
 from base64 import b64encode as _b64encode
@@ -10,10 +10,10 @@ from random import random as _random
 from time import time as _time
 from urllib import quote as _percent_encode
 
-from nisavid.collections import frozenset as _frozenset
-import nisavid.datetime as _datetime
-import nisavid.lang as _lang
 import pytz as _tz
+from spruce.collections import frozenset as _frozenset
+import spruce.datetime as _datetime
+import spruce.lang as _lang
 
 from ... import _exc as _bedframe_exc
 from .. import _algorithms

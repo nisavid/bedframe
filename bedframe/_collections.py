@@ -1,12 +1,12 @@
 """Collections."""
 
-__copyright__ = "Copyright (C) 2013 Ivan D Vasin and Cogo Labs"
+__copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
 
 import re as _re
 
-from nisavid.collections import typedodict as _typedodict
-from nisavid.lang \
+from spruce.collections import typedodict as _typedodict
+from spruce.lang \
     import bool as _bool, regex as _regex, regex_class as _regex_class
 
 
