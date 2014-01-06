@@ -1,5 +1,5 @@
 
-# Copyright (C) 2013 Ivan D Vasin and Cogo Labs
+# Copyright (C) 2014 Ivan D Vasin
 
 
 # flags -----------------------------------------------------------------------
