@@ -1,5 +1,5 @@
 
-# Copyright (C) 2013 Ivan D Vasin and Cogo Labs
+# Copyright (C) 2014 Ivan D Vasin
 
 
 # flags -----------------------------------------------------------------------
@@ -214,7 +214,8 @@ SETUP_FILES_TO_CLEAN := \
     $(BYTECODE_FILES) build dist $(EGG_INFO_DIR) $(EDINSTALLED_EXT_MODULES)
 
 DOC_FILES_TO_CLEAN := \
-    '$(DOC_CONFIG)' '$(DOC_MAKEFILE)' $(DOC_GEN_REST_FILES) '$(DOC_BUILDDIR)'
+    '$(DOC_CONFIG)' '$(DOC_MAKE_BAT)' '$(DOC_MAKEFILE)' $(DOC_GEN_REST_FILES) \
+    '$(DOC_BUILDDIR)'
 
 
 # setup script commands -------------------------------------------------------
