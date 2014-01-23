@@ -180,8 +180,10 @@ else
 		endif
 	endif
 endif
-ifneq "$(VERSION_RELEASE)" ""
+USE_VERSION_SUFFIX := $(VCS_HAS_LOCAL_CHANGES)
+ifneq "$(USE_VERSION_SUFFIX)" "0"
 	VERSION_SUFFIX := .$(VERSION_RELEASE)
+	VERSION := $(VERSION_NOSUFFIX)$(VERSION_SUFFIX)
 	SETUP_OPT_TAG_BUILD := --tag-build '$(VERSION_SUFFIX)'
 	SET_VERSION_SUFFIX := \
         $(PYTHON_SETUP) setopt --command egg_info --option tag-build \
@@ -192,11 +194,10 @@ ifneq "$(VERSION_RELEASE)" ""
                 rm -f setup.cfg; \
             fi
 else
+	VERSION := $(VERSION_NOSUFFIX)
 	SET_VERSION_SUFFIX := true
 	UNSET_VERSION_SUFFIX := true
 endif
-
-VERSION := $(VERSION_NOSUFFIX)$(VERSION_SUFFIX)
 
 
 # generated files -------------------------------------------------------------
