@@ -22,7 +22,7 @@ from .. import _debug
 from .. import _exc
 from .. import _services
 from ..auth import tornado as _tnd_auth
-from . import _core as _tnd_core
+from . import _common as _tnd_common
 from . import _handlers as _tnd_handlers
 
 
@@ -153,7 +153,8 @@ class TornadoService(TornadoServiceABC):
               self._resource_tornado_request_handler_class(resource_class))
              for path_re, resource_class in self.resources.items()]
         app = _tnd_web.Application(handlers,
-                                   log_function=_tnd_core.tornado_log_request)
+                                   log_function=
+                                       _tnd_common.tornado_log_request)
         app.listen(self.port)
         _tnd_ioloop.IOLoop.instance().start()
 
@@ -170,7 +171,7 @@ class TornadoWsgiService(TornadoServiceABC):
              for path_re, resource_class in self.resources.items()]
         app = _tnd_wsgi.WSGIApplication(handlers,
                                         log_function=
-                                            _tnd_core.tornado_log_request)
+                                            _tnd_common.tornado_log_request)
         return app
 
     def _start_nofork(self):

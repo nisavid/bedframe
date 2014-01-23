@@ -17,6 +17,6 @@ try:
 except _pkg_resources.ResolutionError:
     pass
 else:
-    from ._core import *
+    from ._common import *
     from ._handlers import *
     from ._services import *
