@@ -88,7 +88,8 @@ class WebService(object):
 
     """
 
-    def __init__(self, impl=None, uris=None, resources=None, auth_spaces=None,
+    def __init__(self, impl=None, uris=None, resources=None,
+                 auth_constraints=None, auth_spaces=None,
                  debug_flags=_debug.DEBUG_DEFAULT, **kwargs):
         if impl is None:
             try:
