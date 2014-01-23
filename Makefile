@@ -50,6 +50,12 @@ PARENT_NAMESPACE_PKG := \
 
 SIGNER_NAME := Ivan D Vasin <nisavid@gmail.com>
 
+WHEEL_TOOL := \
+    $(shell path="$$(which wheel 2> /dev/null)"; \
+            if [[ -n "$$path" ]]; then \
+                echo \'$$path\'; \
+            fi)
+
 
 # deployment options ----------------------------------------------------------
 
@@ -222,6 +228,7 @@ DOC_FILES_TO_CLEAN := \
 # setup script commands -------------------------------------------------------
 
 SETUP_CMD_BDIST_EGG := bdist_egg --plat-name generic
+SETUP_CMD_BDIST_WHEEL := bdist_wheel
 SETUP_CMD_BUILD := build
 SETUP_CMD_BUILD_DOC := build_sphinx
 SETUP_CMD_EDINSTALL := develop
@@ -391,17 +398,24 @@ uninstall:
 	$(PIP) uninstall $(NAME) < <(yes)
 
 upload:
-	$(PYTHON_SETUP) \
-        $(SETUP_CMD_EGG_INFO) \
-        $(SETUP_CMD_SDIST) \
-        $(SETUP_CMD_BDIST_EGG) \
-        $(SETUP_CMD_REGISTER) \
-        $(SETUP_CMD_UPLOAD)
+	WHEEL_TOOL=$(WHEEL_TOOL) \
+        $(PYTHON_SETUP) \
+            $(SETUP_CMD_EGG_INFO) \
+            $(SETUP_CMD_SDIST) \
+            $(SETUP_CMD_BDIST_WHEEL) \
+            $(SETUP_CMD_BDIST_EGG) \
+            $(SETUP_CMD_REGISTER) \
+            $(SETUP_CMD_UPLOAD)
 
 upload-nosign:
 	$(PYTHON_SETUP) \
         $(SETUP_CMD_EGG_INFO) \
         $(SETUP_CMD_SDIST) \
+        $(SETUP_CMD_BDIST_WHEEL) \
         $(SETUP_CMD_BDIST_EGG) \
         $(SETUP_CMD_REGISTER) \
         $(SETUP_CMD_UPLOAD_NOSIGN)
+
+wheel:
+	WHEEL_TOOL=$(WHEEL_TOOL) \
+        $(PYTHON_SETUP) $(SETUP_CMD_EGG_INFO) $(SETUP_CMD_BDIST_WHEEL)
