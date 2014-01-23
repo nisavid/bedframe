@@ -1,4 +1,4 @@
-"""Web service metadata."""
+"""Web service metadata"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -8,7 +8,7 @@ import re as _re
 
 class ClassDefInfo(object):
 
-    """Class definition metadata."""
+    """Class definition metadata"""
 
     def __init__(self, module, name):
         self._module = module
@@ -33,7 +33,7 @@ class ClassDefInfo(object):
 
 class ExceptionInfo(object):
 
-    """Exception metadata."""
+    """Exception metadata"""
 
     def __init__(self, class_def_info, displayname=None, message=None, args=(),
                  traceback=None):

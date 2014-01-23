@@ -1,4 +1,4 @@
-"""Web services."""
+"""Web services"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -24,7 +24,7 @@ from . import _resources
 
 class WebService(object):
 
-    """A web service.
+    """A web service
 
     A :class:`!WebService` provides an interface to an underlying web service
     implementation.
@@ -119,7 +119,7 @@ class WebService(object):
 
     @property
     def impl(self):
-        """This web service's implementation.
+        """This web service's implementation
 
         :type: :class:`WebServiceImpl`
 
@@ -128,7 +128,7 @@ class WebService(object):
 
     @classmethod
     def register_impl(cls, name, impl):
-        """Register a web service implementation.
+        """Register a web service implementation
 
         :param str name:
             The implementation's name.
@@ -145,7 +145,7 @@ class WebService(object):
 
 class WebServiceImpl(object):
 
-    """A :class:`WebService` implementation.
+    """A :class:`WebService` implementation
 
     :param resources:
         A mapping of resource paths to resource objects.
@@ -196,6 +196,7 @@ class WebServiceImpl(object):
             self._authenticator = _auth.Authenticator(service=self,
                                                       spaces=auth_spaces)
 
+        # FIXME: parametrize better
         sentry_server = self.settings.value('sentry/server')
         self._sentryclient = _sentry.Client(sentry_server) \
                                  if sentry_server is not None else None
@@ -214,7 +215,7 @@ class WebServiceImpl(object):
 
     @property
     def auth_algorithms(self):
-        """The authentication algorithms.
+        """The authentication algorithms
 
         :type: [:class:`bedframe.auth.Algorithm \
                         <bedframe.auth._algorithms.Algorithm>`]
@@ -224,7 +225,7 @@ class WebServiceImpl(object):
 
     @property
     def auth_clerks(self):
-        """The authentication clerks.
+        """The authentication clerks
 
         :type: [:class:`bedframe.auth.Clerk \
                         <bedframe.auth._connectors.Clerk>`]
@@ -234,7 +235,7 @@ class WebServiceImpl(object):
 
     @property
     def auth_scanners(self):
-        """The authentication scanners.
+        """The authentication scanners
 
         :type: [:class:`bedframe.auth.Scanner \
                         <bedframe.auth._connectors.Scanner>`]
@@ -244,7 +245,7 @@ class WebServiceImpl(object):
 
     @property
     def auth_spaces(self):
-        """The authentication spaces.
+        """The authentication spaces
 
         :type: :class:`bedframe.auth.SpaceMap <bedframe.auth._spaces.SpaceMap>`
 
@@ -253,7 +254,7 @@ class WebServiceImpl(object):
 
     @property
     def auth_supplicants(self):
-        """The authentication supplicants.
+        """The authentication supplicants
 
         :type: [:class:`bedframe.auth.Supplicant \
                         <bedframe.auth._connectors.Supplicant>`]
@@ -263,7 +264,7 @@ class WebServiceImpl(object):
 
     @property
     def authenticator(self):
-        """The authenticator.
+        """The authenticator
 
         :type: :class:`bedframe.auth.Authenticator \
                        <bedframe.auth._authenticators.Authenticator>`
@@ -273,7 +274,7 @@ class WebServiceImpl(object):
 
     @property
     def cors_affordancesets(self):
-        """The cross-origin resource sharing affordances map.
+        """The cross-origin resource sharing affordances map
 
         :type: :class:`~bedframe._cors.CorsAffordanceSetMap`
 
@@ -282,7 +283,7 @@ class WebServiceImpl(object):
 
     @property
     def current_auth_info(self):
-        """Authentication information for the current request.
+        """Authentication information for the current request
 
         If no request is currently being handled, this is :obj:`None`.
 
@@ -299,7 +300,7 @@ class WebServiceImpl(object):
 
     @property
     def current_request(self):
-        """The current request.
+        """The current request
 
         If no request is currently being handled, this is :obj:`None`.
 
@@ -317,7 +318,7 @@ class WebServiceImpl(object):
 
     @property
     def debug_flags(self):
-        """The debugging flags.
+        """The debugging flags
 
         :type: :class:`~bedframe._debug.DebugFlagSet`
 
@@ -330,7 +331,7 @@ class WebServiceImpl(object):
 
     def ensure_auth(self, loc=None, **kwargs):
 
-        """Ensure authentication.
+        """Ensure authentication
 
         .. seealso::
             :meth:`bedframe.auth.Authenticator.ensure_auth() \
@@ -344,7 +345,7 @@ class WebServiceImpl(object):
 
     def has_auth(self, loc=None, **kwargs):
 
-        """Whether this request is authenticated.
+        """Whether this request is authenticated
 
         .. seealso::
             :meth:`bedframe.auth.Authenticator.has_auth() \
@@ -378,9 +379,7 @@ class WebServiceImpl(object):
 
     @property
     def resources(self):
-        """
-        A mapping of URI regular expression patterns to classes of objects that
-        handle requests to the resources at those locations.
+        """The web resource map
 
         :type: :class:`bedframe.WebResourceMap \
                        <bedframe._resources._mappings.WebResourceMap>`
@@ -393,7 +392,7 @@ class WebServiceImpl(object):
         return self._settings
 
     def start(self, fork=False):
-        """Start this web service.
+        """Start this web service
 
         Listen for requests on the given *port*, responding according to
         the configured :attr:`resources` and :attr:`auth_spaces`.
@@ -511,12 +510,6 @@ class WebServiceImpl(object):
 
     @_abc.abstractmethod
     def _start_nofork(self):
-        """Start this web service.
-
-        :param int port:
-            The port on which to listen for requests.
-
-        """
         pass
 
 

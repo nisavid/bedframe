@@ -1,4 +1,4 @@
-"""HTTP standard authentication.
+"""HTTP standard authentication
 
 This consists of the mechanisms described in :rfc:`2617`.
 

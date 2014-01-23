@@ -1,4 +1,4 @@
-"""Connectors."""
+"""Connectors"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -13,7 +13,7 @@ from .. import _provisions
 
 # XXX: couple LdapSimpleSupplicant with MemcacheSessionStoreSupplicant
 # FIXME: rewrite Authenticator so that multiple supplicants can be used in one
-#     process.  see the related FIXME in :file:`../_algorithms/_session.py`
+#   process.  see the related FIXME in :file:`../_algorithms/_session.py`
 class LdapSimpleWithMemcacheSessionStorageSupplicant(_session
                                                       .SessionSupplicant):
 

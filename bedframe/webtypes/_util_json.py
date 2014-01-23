@@ -1,4 +1,4 @@
-"""JSON utilities for web-transmittable types."""
+"""JSON utilities for web-transmittable types"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -10,7 +10,7 @@ import ujson as _json
 
 
 def json_dumps(obj, **kwargs):
-    """A JSON_ representation of an object.
+    """A JSON_ representation of an object
 
     .. _JSON: http://en.wikipedia.org/wiki/JSON
 

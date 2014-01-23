@@ -1,4 +1,4 @@
-"""Authentication information."""
+"""Authentication information"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -9,7 +9,7 @@ from . import _tokens
 
 class RequestAuthInfo(object):
 
-    """Request authentication information.
+    """Request authentication information
 
     :param tokens:
         The authentication tokens.
@@ -57,7 +57,7 @@ class RequestAuthInfo(object):
     @property
     def accepted(self):
         """
-        Whether the authentication tokens were accepted by an authenticator.
+        Whether the authentication tokens were accepted by an authenticator
 
         :type: :obj:`bool` or null
 
@@ -66,7 +66,7 @@ class RequestAuthInfo(object):
 
     @property
     def algorithm(self):
-        """The authentication algorithm.
+        """The authentication algorithm
 
         :type: :class:`~bedframe.auth._algorithms.Algorithm`
 
@@ -79,7 +79,7 @@ class RequestAuthInfo(object):
 
     @property
     def clerk(self):
-        """The authentication clerk.
+        """The authentication clerk
 
         :type: :class:`~bedframe.auth._connectors.Clerk`
 
@@ -92,7 +92,7 @@ class RequestAuthInfo(object):
 
     @property
     def provisions(self):
-        """The authentication security provisions.
+        """The authentication security provisions
 
         :type: :class:`~bedframe.auth._provisions.ProvisionSet`
 
@@ -105,7 +105,7 @@ class RequestAuthInfo(object):
 
     @property
     def realm(self):
-        """The authentication realm.
+        """The authentication realm
 
         :type: :obj:`str` or null
 
@@ -140,7 +140,7 @@ class RequestAuthInfo(object):
 
     @property
     def scanner(self):
-        """The authentication scanner.
+        """The authentication scanner
 
         :type: :class:`~bedframe.auth._connectors.Scanner`
 
@@ -153,7 +153,7 @@ class RequestAuthInfo(object):
 
     @property
     def space(self):
-        """The authentication space.
+        """The authentication space
 
         :type: :class:`~bedframe.auth._spaces.Space` or null
 
@@ -166,7 +166,7 @@ class RequestAuthInfo(object):
 
     @property
     def supplicant(self):
-        """The authentication supplicant.
+        """The authentication supplicant
 
         :type: :class:`~bedframe.auth._connectors.Supplicant`
 
@@ -179,9 +179,9 @@ class RequestAuthInfo(object):
 
     @property
     def tokens(self):
-        """The authentication tokens.
+        """The authentication tokens
 
-        :type: :obj:`str` or null
+        :type: :class:`~bedframe.auth._tokens.TokenMap` or null
 
         """
         return self._tokens
@@ -201,7 +201,7 @@ class RequestAuthInfo(object):
 
 class NullRequestAuthInfo(RequestAuthInfo):
 
-    """Null request authentication information.
+    """Null request authentication information
 
     This represents authentication information about a request that does not
     use authentication.
@@ -210,7 +210,7 @@ class NullRequestAuthInfo(RequestAuthInfo):
 
     @property
     def user(self):
-        """The authenticated username.
+        """The authenticated username
 
         :type: null
 

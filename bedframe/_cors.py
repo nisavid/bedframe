@@ -1,4 +1,4 @@
-"""Cross-origin resource sharing.
+"""Cross-origin resource sharing
 
 .. seealso::
     `Cross-Origin Resource Sharing <http://www.w3.org/TR/cors/>`_
@@ -16,7 +16,7 @@ from . import _collections as _coll
 
 class CorsAffordanceSet(object):
 
-    """Cross-origin resource sharing affordances.
+    """Cross-origin resource sharing affordances
 
     :param origins:
         The afforded request origins.
@@ -65,7 +65,7 @@ class CorsAffordanceSet(object):
 
     @property
     def client_preflight_cache_lifespan(self):
-        """The afforded lifespan of each client's preflight result cache.
+        """The afforded lifespan of each client's preflight result cache
 
         :type: :class:`datetime.timedelta`
 
@@ -78,7 +78,7 @@ class CorsAffordanceSet(object):
 
     @property
     def exposed_response_headers(self):
-        """The afforded exposed response headers.
+        """The afforded exposed response headers
 
         :type: u{:obj:`str`}
 
@@ -96,7 +96,7 @@ class CorsAffordanceSet(object):
 
     @property
     def methods(self):
-        """The afforded request methods.
+        """The afforded request methods
 
         :type: u{:obj:`str`}
 
@@ -114,7 +114,7 @@ class CorsAffordanceSet(object):
 
     @property
     def origins(self):
-        """The afforded request origins.
+        """The afforded request origins
 
         :type: u{:obj:`str`}
 
@@ -127,7 +127,7 @@ class CorsAffordanceSet(object):
 
     @property
     def request_headers(self):
-        """The afforded request headers.
+        """The afforded request headers
 
         :type: u{:obj:`str`}
 
@@ -154,16 +154,16 @@ class CorsAffordanceSet(object):
 
 
 class CorsAffordanceSetMap(_coll.HereditaryWebResourcePathMapping):
-    """A cross-origin resource sharing affordances map.
+    """A cross-origin resource sharing affordances map
 
     This is a mapping from resource locations to specifications of their
     cross-origin request sharing affordances.  In addition to the basic
     mutable mapping functionality, it also
 
-        * accepts path patterns in the form of strings or regular
-          expressions and
+      * accepts path patterns in the form of strings or regular
+        expressions and
 
-        * ensures that that its items have valid types and values.
+      * ensures that that its items have valid types and values.
 
     .. seealso::
         :class:`~bedframe._collections.HereditaryResourcePathMapping`

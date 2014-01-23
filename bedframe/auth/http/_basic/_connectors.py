@@ -1,4 +1,4 @@
-"""Connectors."""
+"""Connectors"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -15,7 +15,7 @@ _BASIC_USER_TOKENS = ('user', 'password')
 
 class HttpBasicClerk(_std_http.HttpStandardClerk):
 
-    """An authentication clerk for HTTP Basic authentication."""
+    """An authentication clerk for HTTP Basic authentication"""
 
     __metaclass__ = _abc.ABCMeta
 
@@ -38,7 +38,7 @@ class HttpBasicClerk(_std_http.HttpStandardClerk):
 
 class HttpBasicScanner(_std_http.HttpStandardScanner):
 
-    """An authentication scanner for HTTP Basic authentication."""
+    """An authentication scanner for HTTP Basic authentication"""
 
     __metaclass__ = _abc.ABCMeta
 

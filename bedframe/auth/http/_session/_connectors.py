@@ -1,4 +1,4 @@
-"""Connectors."""
+"""Connectors"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -15,7 +15,7 @@ from ... import _connectors
 
 class HttpSessionConnector(_connectors.Connector):
 
-    """An authentication connector for session-based HTTP authentication.
+    """An authentication connector for session-based HTTP authentication
 
     :param session_manager:
         The session-based authentication manager.
@@ -53,7 +53,7 @@ class HttpSessionConnector(_connectors.Connector):
 
 
 class HttpSessionClerk(HttpSessionConnector, _connectors.Clerk):
-    """An authentication clerk for session-based HTTP authentication.
+    """An authentication clerk for session-based HTTP authentication
 
     .. seealso:: :class:`HttpSessionConnector`
 
@@ -62,7 +62,7 @@ class HttpSessionClerk(HttpSessionConnector, _connectors.Clerk):
 
 
 class HttpSessionScanner(HttpSessionConnector, _connectors.Scanner):
-    """An authentication scanner for session-based HTTP authentication.
+    """An authentication scanner for session-based HTTP authentication
 
     .. seealso:: :class:`HttpSessionConnector`
 
@@ -79,7 +79,7 @@ _SESSION_LOGIN_USER_TOKENS = ('user', 'password')
 class HttpSessionLoginClerk(HttpSessionClerk):
 
     """
-    An authentication clerk for login in session-based HTTP authentication.
+    An authentication clerk for login in session-based HTTP authentication
 
     .. seealso:: :class:`HttpSessionClerk`
 
@@ -120,8 +120,7 @@ class HttpSessionLoginClerk(HttpSessionClerk):
 class HttpSessionLoginScanner(HttpSessionScanner):
 
     """
-    An authentication scanner for login in session-based HTTP
-    authentication.
+    An authentication scanner for login in session-based HTTP authentication
 
     .. seealso:: :class:`HttpSessionScanner`
 
@@ -143,7 +142,7 @@ class HttpSessionRecallClerk(HttpSessionClerk):
 
     """
     An authentication clerk for session recall in session-based HTTP
-    authentication.
+    authentication
 
     .. seealso:: :class:`HttpSessionClerk`
 
@@ -180,7 +179,7 @@ class HttpSessionRecallScanner(HttpSessionScanner):
 
     """
     An authentication scanner for session recall in session-based HTTP
-    authentication.
+    authentication
 
     .. seealso:: :class:`HttpSessionScanner`
 

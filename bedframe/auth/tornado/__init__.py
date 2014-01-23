@@ -1,4 +1,4 @@
-"""Tornado authentication.
+"""Tornado authentication
 
 These objects provide support for authentication for service
 implementations based on :pypi:`Tornado`.

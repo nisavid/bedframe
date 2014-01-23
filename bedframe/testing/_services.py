@@ -1,4 +1,4 @@
-""":mod:`Web service <bedframe._services>` testing."""
+""":mod:`Web service <bedframe._services>` testing"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -35,7 +35,7 @@ from ._auth import _connectors as _bedtest_auth_connectors
 
 class WebServiceTestCase(_unittest.TestCase):
 
-    """Web service tests."""
+    """Web service tests"""
 
     __metaclass__ = _abc.ABCMeta
 
@@ -52,7 +52,7 @@ class WebServiceTestCase(_unittest.TestCase):
                                  exc_name='ResourceConflict', **kwargs):
         """
         Assert that *response* is an :term:`exception response` that
-        indicates a resource state conflict.
+        indicates a resource state conflict
 
         .. seealso:: :meth:`assert_exc_response`
 
@@ -95,7 +95,7 @@ class WebServiceTestCase(_unittest.TestCase):
              **kwargs):
         """
         Assert that *response* is an :term:`return response` that
-        indicates an accepted cross-origin preflight request.
+        indicates an accepted cross-origin preflight request
 
         .. seealso:: :meth:`assert_return_response`
 
@@ -149,7 +149,7 @@ class WebServiceTestCase(_unittest.TestCase):
                                       **kwargs):
         """
         Assert that *response* is an :term:`exception response` that
-        indicates a rejected cross-origin request.
+        indicates a rejected cross-origin request
 
         .. seealso:: :meth:`assert_exc_response`
 
@@ -200,7 +200,7 @@ class WebServiceTestCase(_unittest.TestCase):
                             headers=None,
                             description=None):
 
-        """Assert that *response* is an :term:`exception response`.
+        """Assert that *response* is an :term:`exception response`
 
         :param response:
             A web service response.
@@ -285,7 +285,7 @@ class WebServiceTestCase(_unittest.TestCase):
                                   exc_name='AccessForbidden', **kwargs):
         """
         Assert that *response* is an :term:`exception response` that
-        indicates forbidden access.
+        indicates forbidden access
 
         .. seealso:: :meth:`assert_exc_response`
 
@@ -569,7 +569,7 @@ class WebServiceTestCase(_unittest.TestCase):
     def assert_response_with_status(self, response, statuscode,
                                     description=None, headers=None,
                                     wrapexc=True):
-        """Assert that a *response* has a particular *status*.
+        """Assert that a *response* has a particular *status*
 
         :param response:
             A web service response.
@@ -615,7 +615,7 @@ class WebServiceTestCase(_unittest.TestCase):
                                contenttype='application/json', headers=None,
                                description=None, wrapexc=True):
 
-        """Assert that *response* is a :term:`return response`.
+        """Assert that *response* is a :term:`return response`
 
         :param response:
             A web service response.
@@ -669,7 +669,7 @@ class WebServiceTestCase(_unittest.TestCase):
 
         """
         Assert that *response* is a JSON :term:`return response` with a
-        particular result value.
+        particular result value
 
         .. seealso:: :meth:`assert_return_response`
 
@@ -728,7 +728,7 @@ class WebServiceTestCase(_unittest.TestCase):
         """
         Assert that *response* is a JSON :term:`return response` wherein the
         primitive representation of the result value is a mapping that
-        contains the items in *submap*.
+        contains the items in *submap*
 
         .. seealso:: :meth:`assert_return_response`
 
@@ -884,7 +884,7 @@ class WebServiceTestCase(_unittest.TestCase):
     def assert_unauth_with_no_creds_response(self, response):
         """
         Assert that *response* is an :term:`exception response` that indicates
-        an unauthenticated request with no credentials.
+        an unauthenticated request with no credentials
 
         :param response:
             A web service response.
@@ -903,7 +903,7 @@ class WebServiceTestCase(_unittest.TestCase):
     def assert_unauth_with_wrong_creds_response(self, response):
         """
         Assert that *response* is an :term:`exception response` that indicates
-        an unauthenticated request with incorrect credentials.
+        an unauthenticated request with incorrect credentials
 
         :param response:
             A web service response.

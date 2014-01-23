@@ -1,4 +1,4 @@
-"""Connectors."""
+"""Connectors"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -33,7 +33,7 @@ class TornadoSessionAuthClerk(_http.HttpSessionClerk):
 
     """
     An authentication clerk for session-based HTTP authentication on a
-    :mod:`Tornado <tornado>` server.
+    :mod:`Tornado <tornado>` server
 
     """
 
@@ -47,7 +47,7 @@ class TornadoSessionLoginClerk(TornadoSessionAuthClerk,
                                _http.HttpSessionLoginClerk):
     """
     An authentication clerk for login in session-based HTTP authentication
-    on a :mod:`Tornado <tornado>` server.
+    on a :mod:`Tornado <tornado>` server
 
     """
     def _confirm_auth_info(self, auth_info, affordances):
@@ -75,7 +75,7 @@ class TornadoSessionLoginScanner(_http.HttpSessionLoginScanner):
 
     """
     An authentication scanner for login in session-based HTTP
-    authentication on a :mod:`Tornado <tornado>` server.
+    authentication on a :mod:`Tornado <tornado>` server
 
     """
 
@@ -105,9 +105,9 @@ class TornadoSessionLoginScanner(_http.HttpSessionLoginScanner):
 
     def _realms(self, upstream_affordances, downstream_affordances):
         # XXX: this uses out-of-band information.  the current request state
-        #     should be ignored here.  only the given args should be used
+        #   should be ignored here.  only the given args should be used
         # FIXME: rewrite realm resolution so that the realm info is in-band
-        #     here
+        #   here
         handler = self.service.current_tornado_request_handler
         method_args_prims = handler.request_webmethod_args_prims
         try:
@@ -125,7 +125,7 @@ class TornadoSessionRecallClerk(TornadoSessionAuthClerk,
                                 _http.HttpSessionRecallClerk):
     """
     An authentication clerk for session recall in session-based HTTP
-    authentication on a :mod:`Tornado <tornado>` server.
+    authentication on a :mod:`Tornado <tornado>` server
 
     """
     def logout(self):
@@ -136,7 +136,7 @@ class TornadoSessionRecallScanner(_http.HttpSessionRecallScanner):
 
     """
     An authentication scanner for session recall in session-based HTTP
-    authentication on a :mod:`Tornado <tornado>` server.
+    authentication on a :mod:`Tornado <tornado>` server
 
     """
 

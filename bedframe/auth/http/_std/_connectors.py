@@ -1,4 +1,4 @@
-"""Connectors."""
+"""Connectors"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -11,7 +11,7 @@ from ... import _connectors
 
 class HttpStandardClerk(_connectors.Clerk):
 
-    """An authentication clerk for standard HTTP authentication."""
+    """An authentication clerk for standard HTTP authentication"""
 
     __metaclass__ = _abc.ABCMeta
 
@@ -49,5 +49,5 @@ class HttpStandardClerk(_connectors.Clerk):
 
 
 class HttpStandardScanner(_connectors.Scanner):
-    """An authentication scanner for standard HTTP authentication."""
+    """An authentication scanner for standard HTTP authentication"""
     __metaclass__ = _abc.ABCMeta

@@ -1,4 +1,4 @@
-"""Plain authentication.
+"""Plain authentication
 
 This type of mechanism authenticates a user by means of a username and
 password.  Some implementations of this are called "basic", "simple",

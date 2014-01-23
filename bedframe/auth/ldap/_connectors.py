@@ -1,4 +1,4 @@
-"""Connectors."""
+"""Connectors"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -42,16 +42,16 @@ def _with_lock(lock):
 
 class LdapSupplicant(_connectors.Supplicant):
 
-    """An authentication supplicant that uses LDAP.
+    """An authentication supplicant that uses LDAP
 
     This supplicant treats authentication realms as follows:
 
-        * If the server port is the default LDAP port, then the realm is the
-          server domain name.
+      * If the server port is the default LDAP port, then the realm is the
+        server domain name.
 
-        * If the server port is not the default LDAP port, then the realm is
-          :samp:`{server}:{port}`, where *server* is the server address and
-          *port* is the server port.
+      * If the server port is not the default LDAP port, then the realm is
+        :samp:`{server}:{port}`, where *server* is the server address and
+        *port* is the server port.
 
     If the server is specified prior to authenticating (via the *server*
     argument or the :attr:`server` property), then this supplicant only
@@ -191,7 +191,7 @@ class LdapSupplicant(_connectors.Supplicant):
 
 class LdapSimpleSupplicant(LdapSupplicant):
 
-    """An authentication supplicant that uses LDAP Simple BIND.
+    """An authentication supplicant that uses LDAP Simple BIND
 
     .. seealso:: :class:`LdapSupplicant`
 
@@ -319,7 +319,7 @@ class LdapGetPasswordSupplicant(LdapSupplicant):
 
     """
     An authentication supplicant that retrieves the user's password from an
-    LDAP directory.
+    LDAP directory
 
     """
 

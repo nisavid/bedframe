@@ -1,4 +1,4 @@
-"""Tokens."""
+"""Tokens"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -28,7 +28,7 @@ def tokens_names(tokens_or_names):
 
 class TokenMapABC(object):
 
-    """Authentication tokens."""
+    """Authentication tokens"""
 
     __metaclass__ = _abc.ABCMeta
 
@@ -89,7 +89,7 @@ class TokenMapABC(object):
 
 class FrozenTokenMap(TokenMapABC, _Mapping):
 
-    """Immutable authentication tokens."""
+    """Immutable authentication tokens"""
 
     def __hash__(self):
         return hash(self._tokens)
@@ -113,7 +113,7 @@ class FrozenTokenMap(TokenMapABC, _Mapping):
 
 class TokenMap(TokenMapABC, _MutableMapping):
 
-    """Authentication tokens."""
+    """Authentication tokens"""
 
     def __delattr__(self, name):
         try:

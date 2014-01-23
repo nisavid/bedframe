@@ -1,4 +1,4 @@
-"""Web services."""
+"""Web services"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -22,13 +22,13 @@ from .. import _debug
 from .. import _exc
 from .. import _services
 from ..auth import tornado as _tnd_auth
-from . import _core
-from . import _handlers
+from . import _core as _tnd_core
+from . import _handlers as _tnd_handlers
 
 
 class TornadoServiceABC(_http.HttpService):
 
-    """A web service that uses :mod:`Tornado <tornado>`.
+    """A web service that uses :mod:`Tornado <tornado>`
 
     .. seealso::
         :class:`bedframe.http.HttpService \
@@ -89,7 +89,7 @@ class TornadoServiceABC(_http.HttpService):
                                                               httpmethod)
 
         return type('{}_TornadoRequestHandler'.format(resource_class.__name__),
-                    (_handlers.TornadoRequestHandler,), attrs)
+                    (_tnd_handlers.TornadoRequestHandler,), attrs)
 
     def _resource_tornado_request_handler_method(self, resource_class,
                                                  httpmethod):
@@ -102,12 +102,12 @@ class TornadoServiceABC(_http.HttpService):
                 handler._request_pathparts_jsons_ = pathparts_jsons
 
                 # CAVEAT: call ``resource_class.__new__()`` explicitly so that
-                #     the acceptable media ranges of the bound
-                #     ``resource.__init__()`` can be set prior to calling it.
-                #     this ensures that a web resource's ``__init__()`` method
-                #     is defined in the same way as a web method and behaves
-                #     likewise, albeit having no return value and being used
-                #     for a special purpose.
+                #   the acceptable media ranges of the bound
+                #   ``resource.__init__()`` can be set prior to calling it.
+                #   this ensures that a web resource's ``__init__()`` method is
+                #   defined in the same way as a web method and behaves
+                #   likewise, albeit having no return value and being used for
+                #   a special purpose.
                 resource = resource_class\
                             .__new__(resource_class,
                                      **handler.request_resource_args_prims)
@@ -153,7 +153,7 @@ class TornadoService(TornadoServiceABC):
               self._resource_tornado_request_handler_class(resource_class))
              for path_re, resource_class in self.resources.items()]
         app = _tnd_web.Application(handlers,
-                                   log_function=_core.tornado_log_request)
+                                   log_function=_tnd_core.tornado_log_request)
         app.listen(self.port)
         _tnd_ioloop.IOLoop.instance().start()
 
@@ -169,7 +169,8 @@ class TornadoWsgiService(TornadoServiceABC):
               self._resource_tornado_request_handler_class(resource_class))
              for path_re, resource_class in self.resources.items()]
         app = _tnd_wsgi.WSGIApplication(handlers,
-                                        log_function=_core.tornado_log_request)
+                                        log_function=
+                                            _tnd_core.tornado_log_request)
         return app
 
     def _start_nofork(self):

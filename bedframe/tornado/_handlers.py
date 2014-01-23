@@ -1,4 +1,4 @@
-"""Request handlers."""
+"""Request handlers"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -70,8 +70,8 @@ class TornadoRequestHandler(_tnd_web.RequestHandler):
 
         if self._cors_expose_all_response_headers:
             # XXX: use ``self._headers`` because
-            #     :class:`tornado.web.RequestHandler` doesn't otherwise expose
-            #     the response headers
+            #   :class:`tornado.web.RequestHandler` doesn't otherwise expose
+            #   the response headers
             self.set_header('Access-Control-Expose-Headers',
                             ', '.join(self._headers.keys()))
 
@@ -369,8 +369,7 @@ class TornadoRequestHandler(_tnd_web.RequestHandler):
 
                 # FIXME: obey TE header
 
-                # FIXME: obey If-Modified-Since, If-Unmodified-Since
-                #     headers
+                # FIXME: obey If-Modified-Since, If-Unmodified-Since headers
 
                 # FIXME: obey If-Match, If-None-Match headers
 
@@ -409,7 +408,7 @@ class TornadoRequestHandler(_tnd_web.RequestHandler):
     def _request_pathpart_arg_clause_re(self):
         return _re.compile\
                 (r'[{argseps}](?P<name>[a-zA-Z_]\w*)='
-                  '(?P<value>[^{seps}]*)'
+                  r'(?P<value>[^{seps}]*)'
                   .format(argseps=''.join((self._ordered_pathpart_arg_sep,
                                            self._unordered_pathpart_arg_sep)),
                           seps=''.join((self._pathsep,

@@ -1,4 +1,4 @@
-"""Tornado support.
+"""Tornado support
 
 These objects provide support for service implementations based on
 :pypi:`Tornado`.

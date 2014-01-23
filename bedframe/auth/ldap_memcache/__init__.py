@@ -1,4 +1,4 @@
-"""LDAP-Memcache authentication.
+"""LDAP-Memcache authentication
 
 These objects provide support for authentication using an LDAP backend
 together with a Memcache backend.

@@ -1,4 +1,4 @@
-"""HTTP.
+"""Hypertext Transfer Protocol (HTTP)
 
 These objects provide support for :rfc:`HTTP <2616>`.
 

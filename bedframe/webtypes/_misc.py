@@ -1,4 +1,4 @@
-"""Web-transmittable data types miscellany."""
+"""Web-transmittable data types miscellany"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -8,7 +8,7 @@ from . import _core as _webtypes_core
 
 class nonweb(_webtypes_core.webobject):
 
-    """A non-web object."""
+    """A non-web object"""
 
     def __init__(self, native):
         self._native = native

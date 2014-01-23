@@ -1,4 +1,4 @@
-"""Debugging."""
+"""Debugging"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -9,15 +9,15 @@ from spruce.lang import namedflagset_classes as _namedflagset_classes
 _DebugFlagSet_doc_body = \
     """
     A :class:`!DebugFlagSet` object is a set of debugging flags that could
-    be associated with a :class:`~bedframe._services.Service`.
+    be associated with a :class:`~bedframe._services.Service`
 
     """
 _DebugFlagSet_doc = \
-    """Debugging flags.
+    """Debugging flags
     """ \
     + _DebugFlagSet_doc_body
 _FrozenDebugFlagSet_doc = \
-    """Immutable debugging flags.
+    """Immutable debugging flags
     """ \
     + _DebugFlagSet_doc_body
 DebugFlagSetABC, DebugFlagSet, FrozenDebugFlagSet = \

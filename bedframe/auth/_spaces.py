@@ -1,4 +1,4 @@
-"""Spaces.
+"""Spaces
 
 An authentication space is a directory of resources with a defined set
 of acceptable authentication realms, security provisions, and
@@ -41,11 +41,11 @@ class Space(_handlers.AlgorithmHandler, _handlers.ProvisionSetHandler,
         self._supplicants = _uset(supplicants)
 
     def __repr__(self):
-        return '{}({})'.format(self.__class__.__name__,
-                               ', '.join('{}={!r}'.format(property_, value)
-                                         for property_, value
-                                         in self._init_args(ordered=True)
-                                                .items()))
+        return '{}({})'\
+                .format(self.__class__.__name__,
+                        ', '.join('{}={!r}'.format(property_, value)
+                                  for property_, value
+                                  in self._init_args(ordered=True).items()))
 
     def __str__(self):
         properties_strs = []
@@ -115,16 +115,16 @@ class Space(_handlers.AlgorithmHandler, _handlers.ProvisionSetHandler,
 
 
 class SpaceMap(_coll.HereditaryWebResourcePathMapping):
-    """An authentication space map.
+    """An authentication space map
 
     This is a mapping from authentication spaces' locations to
     specifications of their affordances and behavior.  In addition to the
     basic mutable mapping functionality, it also
 
-        * accepts path patterns in the form of strings or regular
-          expressions and
+      * accepts path patterns in the form of strings or regular
+        expressions and
 
-        * ensures that that its items have valid types and values.
+      * ensures that that its items have valid types and values.
 
     :param mapping_or_items:
         A mapping or item sequence of initial items.

@@ -1,4 +1,4 @@
-"""HTTP Basic Tornado authentication.
+"""HTTP Basic Tornado authentication
 
 .. seealso::
     :mod:`HTTP Basic authentication <bedframe.auth.http._basic>`

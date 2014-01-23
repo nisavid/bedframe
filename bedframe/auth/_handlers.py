@@ -1,4 +1,4 @@
-"""Parameter handlers."""
+"""Parameter handlers"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -549,7 +549,7 @@ class TokenHandler(ParamHandler):
             names = set(names)
         except TypeError:
             raise TypeError('invalid token names type {!r}: expecting an'
-                            ' iterable; given token names {!r}'
+                             ' iterable; given token names {!r}'
                              .format(names.__class__, names))
         return self.outputs(upstream_affordances=upstream_affordances,
                             downstream_affordances=downstream_affordances)\

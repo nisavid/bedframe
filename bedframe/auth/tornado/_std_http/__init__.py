@@ -1,4 +1,4 @@
-"""HTTP standard Tornado authentication.
+"""HTTP standard Tornado authentication
 
 .. seealso::
     :mod:`HTTP standard authentication <bedframe.auth.http._std>`
