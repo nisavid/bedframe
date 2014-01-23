@@ -113,7 +113,7 @@ ifneq "$(VCS)" ""
                                                 ;; \
                                         esac \
                                          | wc --lines); \
-           if [[ $$uncommitted_changed_files -ne 0 ]]; then \
+           if [[ "$$uncommitted_changed_files" -ne 0 ]]; then \
                echo 1; \
            else \
                echo 0; \
@@ -135,8 +135,8 @@ ifneq "$(VCS)" ""
                    committed_local_changes=$$(git diff --name-status \
                                                        \"$$central_version\" \
                                                | wc --lines); \
-                   if [[ $(VCS_HAS_UNCOMMITTED_CHANGES) -ne 0 \
-                         || $$committed_local_changes -ne 0 ]]; then \
+                   if [[ "$(VCS_HAS_UNCOMMITTED_CHANGES)" -ne 0 \
+                         || "$$committed_local_changes" -ne 0 ]]; then \
                        echo 1; \
                    else \
                        echo 0; \
@@ -243,7 +243,7 @@ EGG_INFO_VERSION := \
 
 ifeq "$(EGG_INFO_VERSION)" "$(VERSION)"
 	PYTHON_SETUP_EGG_INFO := true
-	SETUP_CMD_EGG_INFO := ""
+	SETUP_CMD_EGG_INFO :=
 else
 	PYTHON_SETUP_EGG_INFO := $(PYTHON_SETUP) $(SETUP_CMD_EGG_INFO)
 endif
