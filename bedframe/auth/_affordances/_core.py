@@ -1,4 +1,4 @@
-"""Affordances core."""
+"""Affordances core"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -81,7 +81,7 @@ class AffordanceSetABC(object):
 
     @classmethod
     def max(cls):
-        """An affordance set that matches all parameter values.
+        """An affordance set that matches all parameter values
 
         :rtype: :class:`AffordanceSetABC`
 
@@ -90,7 +90,7 @@ class AffordanceSetABC(object):
 
     @classmethod
     def min(cls):
-        """An affordance set that matches no parameter values.
+        """An affordance set that matches no parameter values
 
         :rtype: :class:`AffordanceSetABC`
 
@@ -189,7 +189,7 @@ class AffordanceSetABC(object):
 
 class AffordanceSet(AffordanceSetABC):
 
-    """A set of authentication affordances."""
+    """A set of authentication affordances"""
 
     def __iand__(self, other):
         self._algorithms &= other._algorithms
@@ -240,7 +240,7 @@ class AffordanceSet(AffordanceSetABC):
 
 class FrozenAffordanceSet(AffordanceSetABC):
 
-    """An immutable set of authentication affordances."""
+    """An immutable set of authentication affordances"""
 
     def __hash__(self):
         return hash(self._algorithms) ^ hash(self._provisionsets) \
@@ -254,7 +254,7 @@ class FrozenAffordanceSet(AffordanceSetABC):
 
     @classmethod
     def max(cls):
-        """An immutable affordance set that matches all parameter values.
+        """An immutable affordance set that matches all parameter values
 
         :rtype: :class:`FrozenAffordanceSet`
 
@@ -263,7 +263,7 @@ class FrozenAffordanceSet(AffordanceSetABC):
 
     @classmethod
     def min(cls):
-        """An immutable affordance set that matches no parameter values.
+        """An immutable affordance set that matches no parameter values
 
         :rtype: :class:`FrozenAffordanceSet`
 

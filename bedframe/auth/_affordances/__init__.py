@@ -1,13 +1,13 @@
-"""Affordances.
+"""Affordances
 
 An affordance is a set of allowed parameter values.  Affordances are
 defined over the following types of parameters:
 
-    * realms
+  * realms
 
-    * security provision sets
+  * security provision sets
 
-    * algorithms
+  * algorithms
 
 For all of these parameter types, an
 :class:`~bedframe.auth._affordances._core.AffordanceSet` may contain
@@ -21,9 +21,9 @@ explicitly.
 An :class:`~bedframe.auth._affordances._process.ProcessAffordanceSet`
 additionally contains affordances for these types of parameters:
 
-    * required input token names
+  * required input token names
 
-    * output token names
+  * output token names
 
 If some parameter types are left unspecified when creating an affordance
 set, then those parameters' affordance sets are set to the values that
@@ -34,28 +34,28 @@ they are assigned by the corresponding class's :meth:`!max` method
 <bedframe.auth._affordances._process.ProcessAffordanceSetABC.max>`).
 This maximal affordance set specifies that
 
-    * no input tokens are required,
+  * no input tokens are required,
 
-    * no security provisions are guaranteed, and
+  * no security provisions are guaranteed, and
 
-    * for all other parameter types, all values are accepted.
+  * for all other parameter types, all values are accepted.
 
 For example, the code below creates a process affordance set that
 affords
 
-    * any input token sets that contain either
+  * any input token sets that contain either
 
-      * both a ``domain`` and ``user`` token or
+    * both a ``domain`` and ``user`` token or
 
-      * a ``uid`` token,
+    * a ``uid`` token,
 
-    * a ``password`` output token,
+  * a ``password`` output token,
 
-    * the realms ``foo.net`` and ``bar.net``,
+  * the realms ``foo.net`` and ``bar.net``,
 
-    * client authentication with no further security provisions, and
+  * client authentication with no further security provisions, and
 
-    * any authentication algorithms.
+  * any authentication algorithms.
 
 ::
 

@@ -1,4 +1,4 @@
-"""Exceptions."""
+"""Exceptions"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -93,7 +93,7 @@ class Redirection(Exception):
 
 class EntityChoiceRedirection(Redirection):
 
-    """Multiple entities exist that could satisfy the request.
+    """Multiple entities exist that could satisfy the request
 
     The request was processed, but it did not include enough information to
     specify a single corresponding response entity.  The redirection
@@ -141,7 +141,7 @@ class EntityChoiceRedirection(Redirection):
 
 class EntityUnchanged(Redirection):
 
-    """The requested entity has not changed.
+    """The requested entity has not changed
 
     The request was conditional on the corresponding entity having changed
     from some specified state, and the entity has not actually changed from
@@ -167,7 +167,7 @@ class EntityUnchanged(Redirection):
 
 class ProxyRedirection(Redirection):
 
-    """The request should be repeated through a proxy.
+    """The request should be repeated through a proxy
 
     The request was not processed.  The redirection response indicates the
     location of the appropriate proxy.  The client should continue to use
@@ -198,7 +198,7 @@ class ProxyRedirection(Redirection):
 
 class ResourceLocationRedirection(Redirection):
 
-    """The requested resource has been moved.
+    """The requested resource has been moved
 
     The request was not processed.  The redirection response indicates the
     resource's new location.
@@ -230,7 +230,7 @@ class ResourceLocationRedirection(Redirection):
 
 class ResponseRedirection(Redirection):
 
-    """The response can be found at another location.
+    """The response can be found at another location
 
     The request was processed.  The redirection response indicates the
     location of the actual response.  The client should continue to use the
@@ -259,7 +259,7 @@ class ResponseRedirection(Redirection):
 
 
 class PermanentRedirection(ResourceLocationRedirection):
-    """The requested resource has been moved permanently.
+    """The requested resource has been moved permanently
 
     The request was not processed.  The redirection response indicates the
     resource's new location.  The client should take note of this location
@@ -275,7 +275,7 @@ class PermanentRedirection(ResourceLocationRedirection):
 
 
 class TemporaryRedirection(ResourceLocationRedirection):
-    """The requested resource has been moved temporarily.
+    """The requested resource has been moved temporarily
 
     The request was not processed.  The redirection response indicates the
     resource's new location.  The client should continue to use the original
@@ -707,7 +707,7 @@ class CorsRequestRejected(AccessForbidden):
         if self.message:
             message += ': ' + self.message
         # CAVEAT: do not expose the affordances, since this could be a security
-        #     vulnerability
+        #   vulnerability
         return message
 
     @property
@@ -868,7 +868,7 @@ class UnhandledException(ServerError):
 
     """
     An unhandled exception was encountered in the implementation of the
-    server.
+    server
 
     :param Exception exc:
         The unhandled exception.

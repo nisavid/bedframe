@@ -1,4 +1,4 @@
-"""Collections."""
+"""Collections"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -12,7 +12,7 @@ from spruce.lang \
 
 class WebResourcePathMapping(_typedodict):
 
-    """A mapping keyed by web resource locations.
+    """A mapping keyed by web resource locations
 
     .. note:: **TODO:**
         generalize to notions of resource location other than URI path
@@ -88,7 +88,7 @@ class WebResourcePathMapping(_typedodict):
 
 class HereditaryWebResourcePathMapping(WebResourcePathMapping):
 
-    """A hereditary resource path mapping.
+    """A hereditary resource path mapping
 
     .. seealso:: :class:`WebResourcePathMapping`
 
@@ -101,7 +101,7 @@ class HereditaryWebResourcePathMapping(WebResourcePathMapping):
         lineage = self.loc_lineage(loc)
         if not lineage:
             raise KeyError('no mapped web resource location is an ancestor of'
-                           ' {!r}'.format(loc))
+                            ' {!r}'.format(loc))
         return self._flatten_lineage(lineage)
 
     def __repr__(self):

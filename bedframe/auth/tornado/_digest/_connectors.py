@@ -1,4 +1,4 @@
-"""Connectors."""
+"""Connectors"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -15,8 +15,8 @@ from .. import _std_http
 class TornadoHttpDigestClerk(_std_http.TornadoHttpStandardClerk,
                              _http.HttpDigestClerk):
     """
-    An authentication clerk that uses HTTP Digest authentication on a
-    :mod:`Tornado <tornado>` server.
+    An authentication clerk for HTTP Digest authentication on a
+    :mod:`Tornado <tornado>` server
 
     """
     pass
@@ -26,8 +26,8 @@ class TornadoHttpDigestScanner(_std_http.TornadoHttpStandardScanner,
                                _http.HttpDigestScanner):
 
     """
-    An authentication scanner that uses HTTP Digest authentication on a
-    :mod:`Tornado <tornado>` server.
+    An authentication scanner for HTTP Digest authentication on a
+    :mod:`Tornado <tornado>` server
 
     """
 

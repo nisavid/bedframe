@@ -1,4 +1,4 @@
-"""HTTP Basic authentication.
+"""HTTP Basic authentication
 
 This is the mechanism described in :rfc:`RFC 2617 section 2
 <2617#section-2>`.

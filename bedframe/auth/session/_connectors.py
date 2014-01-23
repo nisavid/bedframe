@@ -1,4 +1,4 @@
-"""Connectors."""
+"""Connectors"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -8,7 +8,7 @@ from .. import _connectors
 
 class SessionSupplicant(_connectors.Supplicant):
 
-    """An authentication supplicant for session-based HTTP authentication.
+    """An authentication supplicant for session-based HTTP authentication
 
     :param session_manager:
         The session-based authentication manager.
@@ -24,7 +24,7 @@ class SessionSupplicant(_connectors.Supplicant):
 
     @property
     def session_manager(self):
-        """The session-based authentication manager.
+        """The session-based authentication manager
 
         :type:
             :class:`bedframe.auth.http.HttpSessionAuthManager \

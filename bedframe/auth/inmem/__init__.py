@@ -1,4 +1,4 @@
-"""In-memory authentication.
+"""In-memory authentication
 
 These objects provide support for authentication using an in-memory
 backend.

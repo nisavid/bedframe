@@ -1,4 +1,4 @@
-"""Exceptions."""
+"""Exceptions"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -14,7 +14,7 @@ class Error(RuntimeError):
 
 class BackendError(Error):
 
-    """An authentication supplicant encountered an error in its backend.
+    """An authentication supplicant encountered an error in its backend
 
     :param supplicant:
         The authentication supplicant that encountered the error.
@@ -111,7 +111,7 @@ class NoValidTokensScanned(Error):
 
     """
     No valid authentication tokens were recognized by some authentication
-    scanner.
+    scanner
 
     :param scanner:
         The scanner.
@@ -310,7 +310,7 @@ class UnsatisfiableAffordances(Error):
 class UnsuitableAgent(Error):
 
     """
-    A chosen authentication agent was unsuitable for a specified operation.
+    A chosen authentication agent was unsuitable for a specified operation
 
     :param str agenttype:
         A name that describes the type of agent.
@@ -432,7 +432,7 @@ class UnsuitableAgent(Error):
 class UnsuitableClerk(UnsuitableAgent):
 
     """
-    A chosen authentication clerk was unsuitable for a specified operation.
+    A chosen authentication clerk was unsuitable for a specified operation
 
     """
 
@@ -457,7 +457,7 @@ class UnsuitableClerk(UnsuitableAgent):
 
 class UnsuitableAuthenticator(UnsuitableAgent):
 
-    """A chosen authenticator was unsuitable for a specified operation."""
+    """A chosen authenticator was unsuitable for a specified operation"""
 
     def __init__(self, agent, operation, realm=None, provisions=None,
                  message=None, supported_realms=None,
@@ -482,7 +482,7 @@ class UnsuitableSupplicant(UnsuitableAgent):
 
     """
     A chosen authentication supplicant was unsuitable for a specified
-    operation.
+    operation
 
     """
 
@@ -509,7 +509,7 @@ class UnsupportedTokens(Error):
 
     """
     An authentication clerk was told to solicit an authentication token with
-    parts that it does not support.
+    parts that it does not support
 
     :param clerk:
         The clerk.

@@ -1,4 +1,4 @@
-"""Algorithms."""
+"""Algorithms"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -36,7 +36,7 @@ class DigestAuth(_algorithms.Algorithm):
         PROVISIONS_QOP_AUTH | _provisions.SECPROV_REQUEST_ENTITY_INTEGRITY
 
     # TODO: add a subclass algorithm with relaxed provisions, and restore the
-    #     true provisions here
+    #   true provisions here
     #PROVISIONSETS = (_provisions.SECPROV_CLIENT_AUTH, PROVISIONS_NO_QOP,
     #                 PROVISIONS_QOP_AUTH, PROVISIONS_QOP_AUTH_INT)
     PROVISIONSETS = (_provisions.SECPROV_CLIENT_AUTH,)

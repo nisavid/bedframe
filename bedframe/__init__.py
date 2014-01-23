@@ -1,4 +1,4 @@
-"""Bedframe, a resource-oriented web services framework.
+"""Bedframe, a resource-oriented web services framework
 
 
 ********

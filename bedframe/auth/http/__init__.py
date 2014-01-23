@@ -1,4 +1,4 @@
-"""HTTP authentication.
+"""HTTP authentication
 
 These objects provide support for authentication on an HTTP server.
 

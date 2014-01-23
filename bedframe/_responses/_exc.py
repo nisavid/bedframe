@@ -1,4 +1,4 @@
-"""Exception responses."""
+"""Exception responses"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -14,7 +14,7 @@ WebExceptionResponseFacetType = \
 
 
 class WebExceptionResponse(_responses_core.WebResponse):
-    """A web exception response.
+    """A web exception response
 
     This type of response indicates a raised exception.
 
@@ -51,10 +51,10 @@ class WebExceptionResponseData(_responses_core.WebResponseData):
 
 class WebExceptionResponseFacet(_responses_core.WebResponseFacet):
 
-    """The data that specifies an exception response."""
+    """The data that specifies an exception response"""
 
     # FIXME: get rid of __init__(..., exc, ...) and :attr:`_exc`; see the
-    #     corresponding FIXME in :mod:`bedframe._services._tornado`
+    #   corresponding FIXME in :mod:`bedframe._services._tornado`
 
     def __init__(self, exc, traceback, debug_flags, class_def_module, name,
                  displayname=None, message=None, args=(), **kwargs):

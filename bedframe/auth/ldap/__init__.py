@@ -1,4 +1,4 @@
-"""LDAP authentication.
+"""LDAP authentication
 
 These objects provide support for authentication using an LDAP backend.
 

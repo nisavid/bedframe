@@ -1,4 +1,4 @@
-"""Algorithms."""
+"""Algorithms"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -52,8 +52,8 @@ class SessionLoginAuth(SessionAuth):
 
     # XXX: couple VerifyLogin with StoreSessionInfo
     # FIXME: rewrite Authenticator to support multiple supplicants in one
-    #     process, then split this into two steps.  see the related FIXME in
-    #     :file:`../_connectors/_ldap_memcache.py`
+    #   process, then split this into two steps.  see the related FIXME in
+    #   :file:`../_connectors/_ldap_memcache.py`
     class VerifyLoginAndStoreSessionInfo(_algorithms.AlgorithmPhase):
 
         @property

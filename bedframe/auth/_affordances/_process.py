@@ -1,4 +1,4 @@
-"""Process affordances."""
+"""Process affordances"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -71,7 +71,7 @@ class ProcessAffordanceSetABC(_affordances_core.AffordanceSetABC):
 
     @classmethod
     def min(cls):
-        """An affordance set that accepts no parameter values.
+        """An affordance set that accepts no parameter values
 
         :rtype: :class:`ProcessAffordanceSetABC`
 
@@ -80,7 +80,7 @@ class ProcessAffordanceSetABC(_affordances_core.AffordanceSetABC):
 
     @classmethod
     def max(cls):
-        """An affordance set that accepts all parameter values.
+        """An affordance set that accepts all parameter values
 
         :rtype: :class:`ProcessAffordanceSetABC`
 
@@ -143,7 +143,7 @@ class ProcessAffordanceSetABC(_affordances_core.AffordanceSetABC):
 
 class ProcessAffordanceSet(ProcessAffordanceSetABC):
 
-    """A set of authentication process affordances."""
+    """A set of authentication process affordances"""
 
     def __iand__(self, other):
         self._general &= other._general
@@ -193,7 +193,7 @@ class ProcessAffordanceSet(ProcessAffordanceSetABC):
 
 class FrozenProcessAffordanceSet(ProcessAffordanceSetABC):
 
-    """An immutable set of authentication process affordances."""
+    """An immutable set of authentication process affordances"""
 
     def __hash__(self):
         return hash(self._general) ^ hash(self._inputs) ^ hash(self._outputs)
@@ -210,7 +210,7 @@ class FrozenProcessAffordanceSet(ProcessAffordanceSetABC):
 
     @classmethod
     def max(cls):
-        """An immutable affordance set that matches all parameter values.
+        """An immutable affordance set that matches all parameter values
 
         :rtype: :class:`FrozenProcessAffordanceSet`
 
@@ -219,8 +219,8 @@ class FrozenProcessAffordanceSet(ProcessAffordanceSetABC):
 
     @classmethod
     def min(cls):
-        """An immutable process affordance set that matches no parameter
-        values.
+        """
+        An immutable process affordance set that matches no parameter values
 
         :rtype: :class:`FrozenProcessAffordanceSet`
 

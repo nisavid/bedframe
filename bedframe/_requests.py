@@ -1,4 +1,4 @@
-"""Web service requests.
+"""Web service requests
 
 This module facilitates processing requests on the server side.
 
@@ -16,7 +16,7 @@ from . import auth as _auth
 
 class WebRequest(object):
 
-    """A web service request.
+    """A web service request
 
     :param service:
         The web service.
@@ -71,7 +71,7 @@ class WebRequest(object):
 
     @property
     def acceptable_mediaranges(self):
-        """The media type ranges that are acceptable to the client.
+        """The media type ranges that are acceptable to the client
 
         :type: ~[str]
 
@@ -80,7 +80,7 @@ class WebRequest(object):
 
     @property
     def auth_info(self):
-        """Authentication information for the current request.
+        """Authentication information for the current request
 
         :type: :class:`bedframe.auth.RequestAuthInfo \
                        <bedframe.auth._info.RequestAuthInfo>`
@@ -94,7 +94,7 @@ class WebRequest(object):
 
     @property
     def auth_space(self):
-        """The authentication space.
+        """The authentication space
 
         :type: :class:`bedframe.auth.Space <bedframe.auth._spaces.Space>`
 
@@ -102,7 +102,7 @@ class WebRequest(object):
         return self.service.auth_spaces[self.loc]
 
     def ensure_auth(self, **kwargs):
-        """Ensure authentication.
+        """Ensure authentication
 
         .. seealso::
             :meth:`bedframe.WebServiceImpl.ensure_auth() \
@@ -112,7 +112,7 @@ class WebRequest(object):
         self.service.ensure_auth(loc=self.loc, **kwargs)
 
     def has_auth(self, **kwargs):
-        """Whether this request is authenticated.
+        """Whether this request is authenticated
 
         .. seealso::
             :meth:`bedframe.WebServiceImpl.has_auth() \
@@ -127,7 +127,7 @@ class WebRequest(object):
 
     @property
     def loc(self):
-        """The requested location.
+        """The requested location
 
         :type: :obj:`str`
 
@@ -136,7 +136,7 @@ class WebRequest(object):
 
     @property
     def method(self):
-        """The requested :term:`web method`.
+        """The requested :term:`web method`
 
         :type: :class:`~bedframe._methods.WebMethod`
 
@@ -145,8 +145,7 @@ class WebRequest(object):
 
     @property
     def method_args_prims(self):
-        """
-        Primitive representations of the requested web method arguments.
+        """Primitive representations of the requested web method arguments
 
         :type: {:obj:`str`: :obj:`object`}
 
@@ -155,7 +154,7 @@ class WebRequest(object):
 
     @property
     def resource(self):
-        """The requested :term:`web resource`.
+        """The requested :term:`web resource`
 
         :type: :class:`~bedframe._resources._core.WebResource`
 
@@ -164,8 +163,7 @@ class WebRequest(object):
 
     @property
     def resource_args_prims(self):
-        """
-        Primitive representations of the requested resource arguments.
+        """Primitive representations of the requested web resource arguments
 
         :type: {:obj:`str`: :obj:`object`}
 
@@ -174,7 +172,7 @@ class WebRequest(object):
 
     @property
     def service(self):
-        """The web service.
+        """The web service
 
         :type: :class:`~bedframe._services.WebServiceImpl`
 
@@ -183,7 +181,7 @@ class WebRequest(object):
 
     @property
     def timestamp(self):
-        """The timestamp.
+        """The timestamp
 
         If the request specifies the date and time at which it was originated,
         then that should be used as the timestamp.  Otherwise, the timestamp
@@ -196,7 +194,7 @@ class WebRequest(object):
 
     @property
     def uri(self):
-        """The requested URI.
+        """The requested URI
 
         :type: :obj:`str`
 

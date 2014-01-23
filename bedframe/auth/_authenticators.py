@@ -1,4 +1,4 @@
-"""Authenticators."""
+"""Authenticators"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -23,7 +23,7 @@ from . import _tokens
 
 class Authenticator(object):
 
-    """An authenticator.
+    """An authenticator
 
     :param service:
         The web service.
@@ -53,7 +53,7 @@ class Authenticator(object):
 
     @property
     def current_auth_info(self):
-        """Authentication information for the current request.
+        """Authentication information for the current request
 
         If no request is currently being handled, this is :obj:`None`.
 
@@ -68,7 +68,7 @@ class Authenticator(object):
 
     def ensure_auth(self, loc, realms='*', provisionsets='*', algorithms='*'):
 
-        """Ensure authentication.
+        """Ensure authentication
 
         This method returns successfully if the request includes authentication
         information wherein the realm, security provisions, and algorithm
@@ -315,7 +315,7 @@ class Authenticator(object):
 
     def has_auth(self, loc, realms='*', provisionsets='*', algorithms='*'):
 
-        """Whether this request is authenticated.
+        """Whether this request is authenticated
 
         This method returns :obj:`True` if the request includes authentication
         information wherein the realm, security provisions, and algorithm

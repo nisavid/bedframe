@@ -50,6 +50,12 @@ PARENT_NAMESPACE_PKG := \
 
 SIGNER_NAME := Ivan D Vasin <nisavid@gmail.com>
 
+WHEEL_TOOL := \
+    $(shell path="$$(which wheel 2> /dev/null)"; \
+            if [[ -n "$$path" ]]; then \
+                echo \'$$path\'; \
+            fi)
+
 
 # deployment options ----------------------------------------------------------
 
@@ -113,7 +119,7 @@ ifneq "$(VCS)" ""
                                                 ;; \
                                         esac \
                                          | wc --lines); \
-           if [[ $$uncommitted_changed_files -ne 0 ]]; then \
+           if [[ "$$uncommitted_changed_files" -ne 0 ]]; then \
                echo 1; \
            else \
                echo 0; \
@@ -135,8 +141,8 @@ ifneq "$(VCS)" ""
                    committed_local_changes=$$(git diff --name-status \
                                                        \"$$central_version\" \
                                                | wc --lines); \
-                   if [[ $(VCS_HAS_UNCOMMITTED_CHANGES) -ne 0 \
-                         || $$committed_local_changes -ne 0 ]]; then \
+                   if [[ "$(VCS_HAS_UNCOMMITTED_CHANGES)" -ne 0 \
+                         || "$$committed_local_changes" -ne 0 ]]; then \
                        echo 1; \
                    else \
                        echo 0; \
@@ -180,8 +186,10 @@ else
 		endif
 	endif
 endif
-ifneq "$(VERSION_RELEASE)" ""
+USE_VERSION_SUFFIX := $(VCS_HAS_LOCAL_CHANGES)
+ifneq "$(USE_VERSION_SUFFIX)" "0"
 	VERSION_SUFFIX := .$(VERSION_RELEASE)
+	VERSION := $(VERSION_NOSUFFIX)$(VERSION_SUFFIX)
 	SETUP_OPT_TAG_BUILD := --tag-build '$(VERSION_SUFFIX)'
 	SET_VERSION_SUFFIX := \
         $(PYTHON_SETUP) setopt --command egg_info --option tag-build \
@@ -192,11 +200,10 @@ ifneq "$(VERSION_RELEASE)" ""
                 rm -f setup.cfg; \
             fi
 else
+	VERSION := $(VERSION_NOSUFFIX)
 	SET_VERSION_SUFFIX := true
 	UNSET_VERSION_SUFFIX := true
 endif
-
-VERSION := $(VERSION_NOSUFFIX)$(VERSION_SUFFIX)
 
 
 # generated files -------------------------------------------------------------
@@ -221,6 +228,7 @@ DOC_FILES_TO_CLEAN := \
 # setup script commands -------------------------------------------------------
 
 SETUP_CMD_BDIST_EGG := bdist_egg --plat-name generic
+SETUP_CMD_BDIST_WHEEL := bdist_wheel
 SETUP_CMD_BUILD := build
 SETUP_CMD_BUILD_DOC := build_sphinx
 SETUP_CMD_EDINSTALL := develop
@@ -243,7 +251,7 @@ EGG_INFO_VERSION := \
 
 ifeq "$(EGG_INFO_VERSION)" "$(VERSION)"
 	PYTHON_SETUP_EGG_INFO := true
-	SETUP_CMD_EGG_INFO := ""
+	SETUP_CMD_EGG_INFO :=
 else
 	PYTHON_SETUP_EGG_INFO := $(PYTHON_SETUP) $(SETUP_CMD_EGG_INFO)
 endif
@@ -390,17 +398,24 @@ uninstall:
 	$(PIP) uninstall $(NAME) < <(yes)
 
 upload:
-	$(PYTHON_SETUP) \
-        $(SETUP_CMD_EGG_INFO) \
-        $(SETUP_CMD_SDIST) \
-        $(SETUP_CMD_BDIST_EGG) \
-        $(SETUP_CMD_REGISTER) \
-        $(SETUP_CMD_UPLOAD)
+	WHEEL_TOOL=$(WHEEL_TOOL) \
+        $(PYTHON_SETUP) \
+            $(SETUP_CMD_EGG_INFO) \
+            $(SETUP_CMD_SDIST) \
+            $(SETUP_CMD_BDIST_WHEEL) \
+            $(SETUP_CMD_BDIST_EGG) \
+            $(SETUP_CMD_REGISTER) \
+            $(SETUP_CMD_UPLOAD)
 
 upload-nosign:
 	$(PYTHON_SETUP) \
         $(SETUP_CMD_EGG_INFO) \
         $(SETUP_CMD_SDIST) \
+        $(SETUP_CMD_BDIST_WHEEL) \
         $(SETUP_CMD_BDIST_EGG) \
         $(SETUP_CMD_REGISTER) \
         $(SETUP_CMD_UPLOAD_NOSIGN)
+
+wheel:
+	WHEEL_TOOL=$(WHEEL_TOOL) \
+        $(PYTHON_SETUP) $(SETUP_CMD_EGG_INFO) $(SETUP_CMD_BDIST_WHEEL)

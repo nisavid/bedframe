@@ -1,4 +1,4 @@
-"""Tornado support.
+"""Tornado support
 
 These objects provide support for service implementations based on
 :pypi:`Tornado`.
@@ -17,6 +17,6 @@ try:
 except _pkg_resources.ResolutionError:
     pass
 else:
-    from ._core import *
+    from ._common import *
     from ._handlers import *
     from ._services import *

@@ -1,4 +1,4 @@
-"""Connectors."""
+"""Connectors"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -17,7 +17,7 @@ class MemcacheSessionAuthSupplicant(_session.SessionSupplicant):
 
     """
     An authentication supplicant that uses an authentication session stored
-    in Memcache.
+    in Memcache
 
     """
 
@@ -67,7 +67,7 @@ class MemcacheSessionStorageSupplicant(MemcacheSessionAuthSupplicant):
 
     """
     An authentication supplicant that stores an authentication session in
-    Memcache.
+    Memcache
 
     """
 
@@ -111,7 +111,7 @@ class MemcacheSessionRecallSupplicant(MemcacheSessionAuthSupplicant):
 
     """
     An authentication supplicant that recalls an authentication session from
-    Memcache.
+    Memcache
 
     """
 

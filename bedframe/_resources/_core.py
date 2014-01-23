@@ -1,4 +1,4 @@
-"""Web resources core."""
+"""Web resources core"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -19,7 +19,7 @@ from .. import webtypes as _webtypes
 
 class WebResource(object):
 
-    """A web resource."""
+    """A web resource"""
 
     @_meth.webmethod()
     def __init__(self):
@@ -58,7 +58,7 @@ class WebResource(object):
 
     @classmethod
     def all_webmethodnames(cls):
-        """The names of the web methods defined for this resource.
+        """The names of the web methods defined for this resource
 
         :type: [:obj:`str`]
 
@@ -69,7 +69,7 @@ class WebResource(object):
 
     @classmethod
     def allowed_webmethodnames(cls):
-        """The names of the web methods allowed for this resource.
+        """The names of the web methods allowed for this resource
 
         :type: [:obj:`str`]
 
@@ -88,7 +88,7 @@ class WebResource(object):
 
     @property
     def current_auth_info(self):
-        """The current request's authentication information.
+        """The current request's authentication information
 
         If this resource is not currently being provided for any request, then
         this is :obj:`None`.
@@ -103,7 +103,7 @@ class WebResource(object):
 
     @property
     def current_debug_flags(self):
-        """The current debugging flags.
+        """The current debugging flags
 
         If no service is currently servicing a request for this resource, then
         this is :obj:`None`.
@@ -118,7 +118,7 @@ class WebResource(object):
 
     @property
     def current_request(self):
-        """The current request.
+        """The current request
 
         If this resource is not currently being provided for any request, then
         this is :obj:`None`.
@@ -133,7 +133,7 @@ class WebResource(object):
 
     @property
     def current_service(self):
-        """The current service.
+        """The current service
 
         If no service is currently servicing a request for this resource, then
         this is :obj:`None`.
@@ -180,7 +180,7 @@ class WebResource(object):
         return self._exc_response_html_content(data)
 
     def ensure_auth(self, **kwargs):
-        """Ensure authentication.
+        """Ensure authentication
 
         .. seealso::
             :meth:`WebRequest.ensure_auth()
@@ -221,7 +221,7 @@ class WebResource(object):
         return self._exc_response_html_content(data)
 
     def has_auth(self, **kwargs):
-        """Whether the current request is authenticated.
+        """Whether the current request is authenticated
 
         .. seealso::
             :meth:`WebRequest.has_auth()
@@ -325,26 +325,26 @@ class WebResource(object):
 
     def provided_by_service(self, service):
         """
-        A context whereby this resource is provided by a particular service.
+        A context whereby this resource is provided by a particular service
 
         :param service:
             A service.
         :type request: :class:`~bedframe._services.WebService`
 
-        :rtype: :class:`contextmanager`
+        :rtype: context
 
         """
         return self._ProvidedByServiceContext(self, service)
 
     def provided_for_request(self, request):
         """
-        A context whereby this resource is provided for a particular request.
+        A context whereby this resource is provided for a particular request
 
         :param request:
             A request.
         :type request: :class:`~bedframe._requests.WebRequest`
 
-        :rtype: :class:`contextmanager`
+        :rtype: context
 
         """
         return self._ProvidedForRequestContext(self, request)
@@ -379,7 +379,7 @@ class WebResource(object):
 
     @classmethod
     def webmethodnames(cls):
-        """The names of this resource's defined web methods.
+        """The names of this resource's defined web methods
 
         :type: [:obj:`str`]
 

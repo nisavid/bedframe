@@ -1,4 +1,4 @@
-"""Memcache authentication.
+"""Memcache authentication
 
 These objects provide support for authentication using a Memcache
 backend.

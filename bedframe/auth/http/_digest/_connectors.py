@@ -1,4 +1,4 @@
-"""Connectors."""
+"""Connectors"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -32,7 +32,7 @@ _DIGEST_USER_TOKENSETS = \
 
 class HttpDigestClerk(_std_http.HttpStandardClerk):
 
-    """An authentication clerk for HTTP Digest authentication."""
+    """An authentication clerk for HTTP Digest authentication"""
 
     __metaclass__ = _abc.ABCMeta
 
@@ -71,7 +71,7 @@ class HttpDigestClerk(_std_http.HttpStandardClerk):
 
 class HttpDigestScanner(_std_http.HttpStandardScanner):
 
-    """An authentication scanner for HTTP Digest authentication."""
+    """An authentication scanner for HTTP Digest authentication"""
 
     __metaclass__ = _abc.ABCMeta
 

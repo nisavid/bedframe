@@ -1,4 +1,4 @@
-"""HTTP Digest Tornado authentication.
+"""HTTP Digest Tornado authentication
 
 .. seealso::
     :mod:`HTTP Digest authentication <bedframe.auth.http._digest>`

@@ -1,4 +1,4 @@
-"""Web resource mappings."""
+"""Web resource mappings"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -14,7 +14,7 @@ from . import _core as _resources_core
 
 class WebResourceMap(_coll.WebResourcePathMapping):
 
-    """A web resource map.
+    """A web resource map
 
     This is a mapping from resource path patterns to web resource classes.
     In addition to the basic mutable mapping functionality, it also

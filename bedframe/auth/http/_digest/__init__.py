@@ -1,4 +1,4 @@
-"""HTTP Digest authentication.
+"""HTTP Digest authentication
 
 This is the mechanism described in :rfc:`RFC 2617 section 3
 <2617#section-3>`.

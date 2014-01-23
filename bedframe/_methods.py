@@ -1,4 +1,4 @@
-"""Web methods."""
+"""Web methods"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -139,7 +139,7 @@ class TypedWebMethod(object):
         try:
             auth_info = self.resource.current_auth_info
         # CAVEAT: some ``resource`` attributes may be uninitialized if ``exc``
-        #     was raised from/for ``resource.__init__()``
+        #   was raised from/for ``resource.__init__()``
         except AttributeError:
             auth_info = None
 
@@ -216,7 +216,7 @@ class WebMethod(object):
 
         if not _getargspec(func).args:
             raise TypeError('{} func must take at least one argument (the'
-                            ' \'self\' reference to its resource)'
+                             ' \'self\' reference to its resource)'
                              .format(self.__class__.__name__))
 
         self._argtypes = argtypes.copy() if argtypes else {}

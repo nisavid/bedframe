@@ -1,4 +1,4 @@
-"""Connectors."""
+"""Connectors"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -16,7 +16,7 @@ class TornadoHttpBasicClerk(_std_http.TornadoHttpStandardClerk,
                                 _http.HttpBasicClerk):
     """
     An authentication clerk for HTTP Basic authentication on a :mod:`Tornado
-    <tornado>` server.
+    <tornado>` server
 
     """
     pass
@@ -27,7 +27,7 @@ class TornadoHttpBasicScanner(_std_http.TornadoHttpStandardScanner,
 
     """
     An authentication scanner for HTTP Basic authentication on a
-    :mod:`Tornado <tornado>` server.
+    :mod:`Tornado <tornado>` server
 
     """
 

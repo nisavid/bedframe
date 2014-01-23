@@ -1,4 +1,4 @@
-"""Connectors core."""
+"""Connectors"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -12,7 +12,7 @@ from . import _handlers
 
 class Connector(_handlers.TokenHandler):
 
-    """An authentication connector.
+    """An authentication connector
 
     A connector is a functional unit in an authentication process.
     Different types of connectors are responsible for different parts of the
@@ -51,7 +51,7 @@ class Connector(_handlers.TokenHandler):
 
 class Clerk(Connector, _handlers.ProvisionSetHandler):
 
-    """An authentication clerk.
+    """An authentication clerk
 
     A clerk communicates with clients, sending authentication tokens to them
     and soliciting tokens from them.
@@ -83,7 +83,7 @@ class Clerk(Connector, _handlers.ProvisionSetHandler):
 
 class Scanner(Connector, _handlers.ProvisionSetHandler):
 
-    """An authentication scanner.
+    """An authentication scanner
 
     A scanner examines requests and extracts authentication tokens from
     them.
@@ -112,7 +112,7 @@ class Scanner(Connector, _handlers.ProvisionSetHandler):
 class Supplicant(Connector, _handlers.ProvisionSetHandler,
                  _handlers.RealmHandler):
 
-    """An authentication supplicant.
+    """An authentication supplicant
 
     A supplicant communicates with an authentication backend, sending it the
     client's authentication tokens for verification.

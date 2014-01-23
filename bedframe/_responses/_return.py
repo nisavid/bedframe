@@ -1,4 +1,4 @@
-"""Return responses."""
+"""Return responses"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -13,7 +13,7 @@ WebReturnResponseFacetType = \
 
 
 class WebReturnResponse(_responses_core.WebResponse):
-    """A web return response.
+    """A web return response
 
     This type of response indicates a return from a function.
 
@@ -23,7 +23,7 @@ class WebReturnResponse(_responses_core.WebResponse):
 
 class WebReturnResponseData(_responses_core.WebResponseData):
 
-    """The data that specifies a return response."""
+    """The data that specifies a return response"""
 
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('keytype', WebReturnResponseFacetType)

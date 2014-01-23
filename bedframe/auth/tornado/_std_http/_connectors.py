@@ -1,4 +1,4 @@
-"""Connectors."""
+"""Connectors"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -11,8 +11,8 @@ from ... import http as _http
 class TornadoHttpStandardClerk(_http.HttpStandardClerk):
 
     """
-    An authentication clerk that uses HTTP authentication on a :mod:`Tornado
-    <tornado>` server.
+    An authentication clerk for standard HTTP authentication on a
+    :mod:`Tornado <tornado>` server
 
     """
 
@@ -29,8 +29,8 @@ class TornadoHttpStandardClerk(_http.HttpStandardClerk):
 
 class TornadoHttpStandardScanner(_http.HttpStandardScanner):
     """
-    An authentication scanner that uses HTTP authentication on a
-    :mod:`Tornado <tornado>` server.
+    An authentication scanner for standard HTTP authentication on a
+    :mod:`Tornado <tornado>` server
 
     """
     __metaclass__ = _abc.ABCMeta

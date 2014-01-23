@@ -1,4 +1,4 @@
-"""Connectors."""
+"""Connectors"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -14,7 +14,7 @@ class InMemoryPlainSupplicant(_connectors.Supplicant):
 
     """
     An authentication supplicant that uses an in-memory mapping of users to
-    passwords.
+    passwords
 
     :param users_passwords:
         The mapping of user names to passwords.
@@ -68,7 +68,7 @@ class InMemoryGetPasswordSupplicant(_connectors.Supplicant):
 
     """
     An authentication supplicant that uses an in-memory mapping of users to
-    passwords.
+    passwords
 
     :param users_passwords:
         The mapping of user names to passwords.

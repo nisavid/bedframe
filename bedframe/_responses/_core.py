@@ -1,4 +1,4 @@
-"""Responses core."""
+"""Responses core"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -26,7 +26,7 @@ class web_response_facettype_enum(_enum):
 
 class WebResponse(object):
 
-    """A web response.
+    """A web response
 
     This is a response to a web service request.
 
@@ -46,9 +46,9 @@ class WebResponse(object):
 
     @property
     def content(self):
-        """The response's content.
+        """The response's content
 
-        :type: unicode or None
+        :type: :obj:`unicode` or null
 
         """
         return self._content
@@ -63,7 +63,7 @@ class WebResponse(object):
 
     @classmethod
     def fromdata(cls, data, content=None):
-        """Create a response that contains some given data.
+        """Create a response that contains some given data
 
         The class of the resulting response is specified by
         :samp:`{data}.response_type`.
@@ -84,7 +84,7 @@ class WebResponse(object):
 
     @property
     def mediatype(self):
-        """The media type of the response's content.
+        """The media type of the response's content
 
         :type: :obj:`str` or null
 
@@ -94,7 +94,7 @@ class WebResponse(object):
 
 class WebResponseFacet(object):
 
-    """A web response facet.
+    """A web response facet
 
     :param mediatype:
         The media type of the response's content.
@@ -120,7 +120,7 @@ class WebResponseFacetMap(_typedodict):
 
 class WebResponseData(WebResponseFacetMap):
 
-    """The data that specify a web response.
+    """The data that specify a web response
 
     :param mediatype:
         The media type of the response's content.

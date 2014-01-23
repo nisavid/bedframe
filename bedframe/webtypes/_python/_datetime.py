@@ -1,4 +1,4 @@
-"""Web-transmittable :mod:`datetime` types."""
+"""Web-transmittable :mod:`datetime` types"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -13,7 +13,7 @@ from .. import _core
 
 class datetime(_core.webobject):
 
-    """A web-transmittable date and time.
+    """A web-transmittable date and time
 
     This wraps a timezone-aware :class:`datetime.datetime`.
 
@@ -72,7 +72,7 @@ class datetime(_core.webobject):
 
 class timedelta(_core.webobject):
 
-    """A web-transmittable time difference.
+    """A web-transmittable time difference
 
     This wraps a :class:`datetime.timedelta`.
 

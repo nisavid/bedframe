@@ -1,4 +1,4 @@
-"""Redirection responses."""
+"""Redirection responses"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -14,7 +14,7 @@ WebResponseRedirectionResponseFacetType = \
 
 
 class WebResponseRedirectionResponse(_responses_core.WebResponse):
-    """A response redirection response.
+    """A response redirection response
 
     This type of response indicates a response redirection.
 
@@ -59,7 +59,7 @@ class WebResponseRedirectionResponseData(_responses_core.WebResponseData):
 
 class WebResponseRedirectionResponseFacet(_responses_core.WebResponseFacet):
 
-    """The data that specifies a response redirection response."""
+    """The data that specifies a response redirection response"""
 
     def __init__(self, loc, message=None, **kwargs):
         super(WebResponseRedirectionResponseFacet, self).__init__(**kwargs)

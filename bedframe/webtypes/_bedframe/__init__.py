@@ -1,4 +1,4 @@
-"""Web-transmittable web service data types."""
+"""Web-transmittable Bedframe data types"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"

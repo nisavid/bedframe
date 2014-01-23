@@ -1,4 +1,4 @@
-"""Web-transmittable data types core."""
+"""Web-transmittable data types core"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -12,7 +12,7 @@ from . import _util_json
 
 class webobject(object):
 
-    """A web object.
+    """A web object
 
     This is an object that is exchanged between web clients and servers.
     It enables web services to be implemented in terms of :term:`native`
@@ -40,7 +40,7 @@ class webobject(object):
 
     @classmethod
     def fromjson(cls, string, **kwargs):
-        """The web object that is represented by a JSON_ string.
+        """The web object that is represented by a JSON_ string
 
         .. _JSON: http://en.wikipedia.org/wiki/JSON
 
@@ -63,7 +63,7 @@ class webobject(object):
     @classmethod
     @_abc.abstractmethod
     def fromprim(cls, prim):
-        """The web object that is represented by a primitive object.
+        """The web object that is represented by a primitive object
 
         :param prim:
             A primitive representation of this type of web object.
@@ -91,7 +91,7 @@ class webobject(object):
         pass
 
     def json(self, **kwargs):
-        """A JSON_ representation of this web object.
+        """A JSON_ representation of this web object
 
         .. _JSON: http://en.wikipedia.org/wiki/JSON
 
@@ -106,17 +106,16 @@ class webobject(object):
         return _util_json.json_dumps(self.prim(), **kwargs)
 
     def native(self):
-        """The :term:`native` object that is wrapped by this web object."""
+        """The :term:`native` object that is wrapped by this web object"""
         return self._native
 
     @_abc.abstractmethod
     def prim(self):
-        """A :term:`primitive` representation of this web object.
+        """A :term:`primitive` representation of this web object
 
         :rtype:
-            :class:`NoneType` or :obj:`bool` or :obj:`int`
-            or :obj:`float` or :obj:`bytes` or :obj:`unicode`
-            or :obj:`list` or :class:`dict`
+            null or :obj:`bool` or :obj:`int` or :obj:`float` or :obj:`bytes`
+            or :obj:`unicode` or :obj:`list` or :class:`dict`
 
         """
         pass

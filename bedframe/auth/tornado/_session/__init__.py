@@ -1,4 +1,4 @@
-"""Session-based Tornado authentication.
+"""Session-based Tornado authentication
 
 .. seealso::
     :mod:`Session-based HTTP authentication \

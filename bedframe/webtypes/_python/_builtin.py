@@ -1,4 +1,4 @@
-"""Web-transmittable built-in Python types."""
+"""Web-transmittable built-in Python types"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -10,7 +10,7 @@ from .. import _core
 
 class primitive(_core.webobject):
 
-    """A web-transmittable :term:`primitive` object."""
+    """A web-transmittable :term:`primitive` object"""
 
     @classmethod
     def fromprim(cls, prim):
@@ -26,14 +26,14 @@ class primitive(_core.webobject):
 
 
 class bool(primitive):
-    """A web-transmittable :obj:`bool`."""
+    """A web-transmittable :obj:`bool`"""
     @classmethod
     def _prim_class(cls):
         return __builtin__.bool
 
 
 class bytes(primitive):
-    """A web-transmittable :obj:`bytes` object."""
+    """A web-transmittable :obj:`bytes` object"""
     @classmethod
     def _prim_class(cls):
         return __builtin__.bytes
@@ -41,7 +41,7 @@ class bytes(primitive):
 
 _dict_classes = {}
 def dict(keytype, valuetype):
-    """A web-transmittable :class:`dict`.
+    """A web-transmittable :class:`dict`
 
     :param keytype:
         The web-transmittable data type of this container's keys.
@@ -74,14 +74,14 @@ def dict(keytype, valuetype):
 
 
 class float(primitive):
-    """A web-transmittable :obj:`float`."""
+    """A web-transmittable :obj:`float`"""
     @classmethod
     def _prim_class(cls):
         return __builtin__.float
 
 
 class int(primitive):
-    """A web-transmittable :obj:`int`."""
+    """A web-transmittable :obj:`int`"""
     @classmethod
     def _prim_class(cls):
         return __builtin__.int
@@ -89,7 +89,7 @@ class int(primitive):
 
 _list_classes = {}
 def list(itemtype):
-    """A web-transmittable :obj:`list`.
+    """A web-transmittable :obj:`list`
 
     :param itemtype:
         The web-transmittable data type of this container's items.
@@ -113,7 +113,7 @@ def list(itemtype):
 
 
 class null(primitive):
-    """A web-transmittable :obj:`None`."""
+    """A web-transmittable :obj:`None`"""
     @classmethod
     def fromprim(cls, prim):
         if prim is None:
@@ -125,7 +125,7 @@ class null(primitive):
 
 
 class unicode(primitive):
-    """A web-transmittable :obj:`unicode`."""
+    """A web-transmittable :obj:`unicode`"""
     @classmethod
     def _prim_class(cls):
         return _normalized_unicode

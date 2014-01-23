@@ -1,4 +1,4 @@
-"""Web services."""
+"""Web services"""
 
 __copyright__ = "Copyright (C) 2014 Ivan D Vasin"
 __docformat__ = "restructuredtext"
@@ -26,7 +26,7 @@ from . import _exc
 
 class HttpService(_services.WebServiceImpl):
 
-    """A web service that uses HTTP.
+    """A web service that uses HTTP
 
 
     **Multi-purpose POST**
@@ -164,7 +164,7 @@ class HttpService(_services.WebServiceImpl):
     @classmethod
     def _exc_http_statuscode(cls, exc=None):
 
-        """The HTTP response status code for an exception.
+        """The HTTP response status code for an exception
 
         If *exc* is one of the :mod:`Bedframe exceptions <bedframe._exc>` that
         corresponds to an HTTP response status code, then that code is
@@ -225,7 +225,7 @@ class HttpService(_services.WebServiceImpl):
 
     @classmethod
     def _natural_httpmethod(cls, webmethodname):
-        """The HTTP method that naturally corresponds to a web method name.
+        """The HTTP method that naturally corresponds to a web method name
 
         :param str webmethodname:
             The name of a web method.
@@ -290,9 +290,9 @@ class HttpService(_services.WebServiceImpl):
     def _request_body_args_prims_frombody(self, body, mediatype, httpmethod):
 
         # CAVEAT: handle the request body only for HTTP methods that define
-        #     semantics for the body.  :rfc:`2616#section-4.3` recommends to
-        #     ignore message bodies for methods that do not specify semantics
-        #     for entity bodies
+        #   semantics for the body.  :rfc:`2616#section-4.3` recommends to
+        #   ignore message bodies for methods that do not specify semantics for
+        #   entity bodies
         if not _http.method_defines_body_semantics(httpmethod):
             return {}
 
@@ -317,8 +317,8 @@ class HttpService(_services.WebServiceImpl):
             return 'get'
 
         # CAVEAT: examine the query string to convert HTTP POST to calls to
-        #     corresponding web method names whose HTTP implementations do not
-        #     reliably support message bodies
+        #   corresponding web method names whose HTTP implementations do not
+        #   reliably support message bodies
         if httpmethod == 'POST':
             query_method_pattern = r'^{}(&|$)'
             for name in (cls._webmethodname(httpmethod)
@@ -333,7 +333,7 @@ class HttpService(_services.WebServiceImpl):
     @classmethod
     def _supported_httpmethods(cls, webmethodnames):
 
-        """The HTTP methods that should be supported by this service.
+        """The HTTP methods that should be supported by this service
 
         .. note::
             This does not return the same result as calling
@@ -352,9 +352,9 @@ class HttpService(_services.WebServiceImpl):
         httpmethods = {cls._natural_httpmethod(methodname)
                        for methodname in webmethodnames}
 
-        # CAVEAT: expose HTTP POST as a means to submit long arguments to
-        #     web methods whose HTTP implementations do not reliably support
-        #     message bodies
+        # CAVEAT: expose HTTP POST as a means to submit long arguments to web
+        #   methods whose HTTP implementations do not reliably support message
+        #   bodies
         if any(not _http.method_defines_body_semantics(method)
                for method in httpmethods):
             httpmethods.add('POST')
@@ -366,7 +366,7 @@ class HttpService(_services.WebServiceImpl):
 
     @classmethod
     def _webmethodname(cls, httpmethod):
-        """The web method name that corresponds to an HTTP method.
+        """The web method name that corresponds to an HTTP method
 
         :param str httpmethod:
             An HTTP method.
