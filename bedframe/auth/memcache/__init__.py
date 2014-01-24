@@ -1,7 +1,9 @@
-"""Memcache authentication
+"""Memcached authentication
 
-These objects provide support for authentication using a Memcache
+These objects provide support for authentication using a memcached
 backend.
+
+.. seealso:: `memcached <http://www.memcached.org/>`
 
 """
 

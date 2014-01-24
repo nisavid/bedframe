@@ -13,9 +13,11 @@ from setuptools import find_packages as _find_packages, setup as _setup
 
 NAME = 'Bedframe'
 
-VERSION = '0.13.3'
+VERSION = '0.13.4'
 
 SITE_URI = ''
+
+DOWNLOAD_URI = 'https://github.com/nisavid/bedframe'
 
 DESCRIPTION = 'A resource-oriented web services framework'
 
@@ -60,12 +62,13 @@ INSTALL_DEPS = ('psutil',
                 'spruce-logging',
                 'spruce-pprint',
                 'spruce-http-common',
+                'spruce-settings',
                 'spruce-validation',
                 'ujson-bedframe',
                 )
 
 EXTRAS_DEPS = {'ldap': ('python-ldap',),
-               'memcache': ('python-memcached',),
+               'memcached': ('python-memcached',),
                'test_ldap': ('spruce-ldap [openldap]',),
                'tornado': ('tornado-bedframe >3',),
                'tornado_wsgi': ('gevent', 'tornado-bedframe >3'),
@@ -106,6 +109,7 @@ if __name__ == '__main__':
     _setup(name=NAME,
            version=VERSION,
            url=SITE_URI,
+           download_url=DOWNLOAD_URI,
            description=DESCRIPTION,
            long_description=LONG_DESCRIPTION,
            author=', '.join(__credits__),
