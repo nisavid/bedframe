@@ -1,6 +1,10 @@
-"""LDAP authentication
+"""Lightweight Directory Access Protocol (LDAP) authentication
 
 These objects provide support for authentication using an LDAP backend.
+
+.. seealso::
+    :rfc:`Lightweight Directory Access Protocol (LDAP): Technical
+          Specification Road Map <4510>`
 
 """
 

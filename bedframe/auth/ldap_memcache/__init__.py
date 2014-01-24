@@ -1,7 +1,12 @@
-"""LDAP-Memcache authentication
+"""LDAP-memcached authentication
 
 These objects provide support for authentication using an LDAP backend
-together with a Memcache backend.
+together with a memcached backend.
+
+.. seealso::
+    :rfc:`Lightweight Directory Access Protocol (LDAP): Technical
+          Specification Road Map <4510>`,
+    `memcached <http://www.memcached.org/>`
 
 """
 

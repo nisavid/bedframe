@@ -19,10 +19,10 @@ class WebResourceMap(_coll.WebResourcePathMapping):
     This is a mapping from resource path patterns to web resource classes.
     In addition to the basic mutable mapping functionality, it also
 
-        * accepts path patterns in the form of strings or regular
-          expressions and
+      * accepts path patterns in the form of strings or regular
+        expressions and
 
-        * ensures that that its items have valid types and values.
+      * ensures that that its items have valid types and values.
 
     :param mapping_or_items:
         A mapping or item sequence of initial items.
